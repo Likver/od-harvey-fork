@@ -30,7 +30,10 @@ public class OnlineManager {
     public static final String endpoint = "https://" + hostname + "/api/";
     private static final String onlineVersion = "29";
 
-    public static final OkHttpClient client = new OkHttpClient();
+    public static final OkHttpClient client = new OkHttpClient()
+        .newBuilder()
+        .followRedirects(true)
+        .build();
 
     private static OnlineManager instance = null;
     private Context context;
