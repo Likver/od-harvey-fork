@@ -40,11 +40,12 @@ import ru.nsu.ccfit.zuev.osu.LibraryManager;
 import ru.nsu.ccfit.zuev.osu.MainActivity;
 import ru.nsu.ccfit.zuev.osu.PropertiesLibrary;
 import ru.nsu.ccfit.zuev.osu.ResourceManager;
+import ru.nsu.ccfit.zuev.osu.SkinManager;
 import ru.nsu.ccfit.zuev.osu.ToastLogger;
 import ru.nsu.ccfit.zuev.osu.Updater;
 import ru.nsu.ccfit.zuev.osu.async.AsyncTaskLoader;
 import ru.nsu.ccfit.zuev.osu.async.OsuAsyncCallback;
-import ru.nsu.ccfit.zuev.osu.game.SpritePool;
+// import ru.nsu.ccfit.zuev.osu.game.SpritePool;
 import ru.nsu.ccfit.zuev.osu.helper.StringTable;
 import ru.nsu.ccfit.zuev.osu.online.OnlineInitializer;
 import ru.nsu.ccfit.zuev.osuplus.R;
@@ -70,18 +71,12 @@ public class SettingsMenu extends SettingsFragment {
             if(GlobalManager.getInstance().getSkinNow() != newValue.toString()) {
                 // SpritePool.getInstance().purge();
                 GlobalManager.getInstance().setSkinNow(Config.getSkinPath());
-                new AsyncTaskLoader().execute(new OsuAsyncCallback() {
-                    public void run() {
-                        ResourceManager.getInstance().loadCustomSkin(Config.getSkinPath());
-                        GlobalManager.getInstance().getEngine().getTextureManager().reloadTextures();
-                    }
-
-                    public void onComplete() {
-                        mActivity.startActivity(new Intent(mActivity, MainActivity.class));
-                        Snackbar.make(mActivity.findViewById(android.R.id.content),
-                            StringTable.get(R.string.message_loaded_skin), 1500).show();
-                    }
-                });
+                SkinManager.getInstance().clearSkin();
+                ResourceManager.getInstance().loadSkin(newValue.toString());
+                GlobalManager.getInstance().getEngine().getTextureManager().reloadTextures();
+                mActivity.startActivity(new Intent(mActivity, MainActivity.class));
+                Snackbar.make(mActivity.findViewById(android.R.id.content),
+                    StringTable.get(R.string.message_loaded_skin), 1500).show();
             }
             return true;
         });
@@ -245,33 +240,35 @@ public class SettingsMenu extends SettingsFragment {
 
     protected void playOnLoadAnim() {
         View body = findViewById(R.id.body);
-        body.setTranslationX(100);
-        body.setTranslationY(0);
+        body.setAlpha(0);
+        body.setTranslationX(400);
         body.animate().cancel();
         body.animate()
-            .translationX(0)
-            .setDuration(300)
-            .setInterpolator(EasingHelper.asInterpolator(Easing.InOutQuad))
-            .start();
-        playBackgroundHideInAnim(200);
+                .translationX(0)
+                .alpha(1)
+                .setInterpolator(EasingHelper.asInterpolator(Easing.InOutQuad))
+                .setDuration(150)
+                .start();
+        playBackgroundHideInAnim(150);
     }
 
-    protected void playOnDismissAnim(Runnable runnable) {
+    protected void playOnDismissAnim(Runnable action) {
         View body = findViewById(R.id.body);
         body.animate().cancel();
         body.animate()
-            .translationX(100)
-            .setDuration(300)
-            .setInterpolator(EasingHelper.asInterpolator(Easing.InOutQuad))
-            .setListener(new BaseAnimationListener() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    if (runnable != null) {
-                        runnable.run();
+                .translationXBy(400)
+                .alpha(0)
+                .setDuration(200)
+                .setInterpolator(EasingHelper.asInterpolator(Easing.InOutQuad))
+                .setListener(new BaseAnimationListener() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        if (action != null) {
+                            action.run();
+                        }
                     }
-                }
-            })
-            .start();
+                })
+                .start();
         playBackgroundHideOutAnim(200);
     }
 

@@ -39,7 +39,7 @@
             android:key="bgbrightness" android:summary="@string/opt_bgbrightness_summary"
             android:defaultValue="25" android:entryValues="@array/bg_brightness_values"/> -->
         <com.edlplan.ui.SkinPathPreference android:title="@string/opt_skinpath_title" android:summary="@string/opt_skinpath_summary"
-            android:key="skinPath" android:entryValues="@array/placeholder_values"/>
+            android:key="skinPath" android:entries="@array/placeholder_array" android:entryValues="@array/placeholder_array"/>
         <ListPreference android:entries="@array/error_meter_display_names" android:title="@string/opt_error_meter_display_title"
             android:key="errormeter" android:summary="@string/opt_error_meter_display_summary"
             android:defaultValue="0" android:entryValues="@array/error_meter_display_values"/>
@@ -86,6 +86,8 @@
             android:summary="@string/opt_dither_summary" android:defaultValue="true"/>
         <CheckBoxPreference android:key="superSlider" android:summary="@string/opt_superSlider_summary"
             android:title="@string/opt_superSlider_title" android:defaultValue="true"/>
+        <CheckBoxPreference android:key="trianglesAnimation" android:title="@string/opt_triangles_animation_title"
+            android:summary="@string/opt_triangles_animation_summary" android:defaultValue="true"/>
 
         <PreferenceScreen android:key="color" android:title="@string/opt_combo_colors_title" android:summary="">
             <CheckBoxPreference android:key="useCustomColors" android:title="@string/opt_combo_colors_title"

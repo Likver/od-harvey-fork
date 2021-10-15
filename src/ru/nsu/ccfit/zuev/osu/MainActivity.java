@@ -65,6 +65,10 @@ import java.security.Security;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.util.zip.ZipFile;
 
 import pub.devrel.easypermissions.AppSettingsDialog;
@@ -145,21 +149,18 @@ public class MainActivity extends BaseGameActivity implements
         opt.getRenderOptions().disableExtensionVertexBufferObjects();
         opt.getTouchOptions().enableRunOnUpdateThread();
         final Engine engine = new Engine(opt);
-
-        if (Config.isMultitouch()) {
-            try {
-                if (MultiTouch.isSupported(this)) {
-                    engine.setTouchController(new MultiTouchController());
-                } else {
-                    ToastLogger.showText(
-                            StringTable.get(R.string.message_error_multitouch),
-                            false);
-                }
-            } catch (final MultiTouchException e) {
+        try {
+            if (MultiTouch.isSupported(this)) {
+                engine.setTouchController(new MultiTouchController());
+            } else {
                 ToastLogger.showText(
                         StringTable.get(R.string.message_error_multitouch),
                         false);
             }
+        } catch (final MultiTouchException e) {
+            ToastLogger.showText(
+                    StringTable.get(R.string.message_error_multitouch),
+                    false);
         }
         GlobalManager.getInstance().setCamera(mCamera);
         GlobalManager.getInstance().setEngine(engine);
@@ -798,7 +799,7 @@ public class MainActivity extends BaseGameActivity implements
         return super.onKeyDown(keyCode, event);
     }
 
-    private void cheatedExit() {
+    private void forcedExit() {
         if(GlobalManager.getInstance().getEngine().getScene() == GlobalManager.getInstance().getGameScene().getScene()) {
             GlobalManager.getInstance().getGameScene().quit();
         }
@@ -807,29 +808,32 @@ public class MainActivity extends BaseGameActivity implements
     }
 
     private void initAccessibilityDetector() {
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-                AccessibilityManager manager = (AccessibilityManager) getSystemService(Context.ACCESSIBILITY_SERVICE);
+        ScheduledExecutorService scheduledExecutorService =
+            Executors.newSingleThreadScheduledExecutor();
+        scheduledExecutorService
+            .scheduleAtFixedRate(() -> {
+                AccessibilityManager manager = (AccessibilityManager)
+                    getSystemService(Context.ACCESSIBILITY_SERVICE);
                 List<AccessibilityServiceInfo> activeServices = new ArrayList<AccessibilityServiceInfo>(
-                    manager.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_ALL_MASK));
+                    manager.getEnabledAccessibilityServiceList(
+                        AccessibilityServiceInfo.FEEDBACK_ALL_MASK));
 
                 for(AccessibilityServiceInfo activeService : activeServices) {
                      int capabilities = activeService.getCapabilities();
                     if((AccessibilityServiceInfo.CAPABILITY_CAN_PERFORM_GESTURES & capabilities)
                             == AccessibilityServiceInfo.CAPABILITY_CAN_PERFORM_GESTURES) {
                         if(!autoclickerDialogShown && activityVisible) {
-                            ConfirmDialogFragment dialog = new ConfirmDialogFragment()
-                                .setMessage(R.string.message_autoclicker_detected);
-                            dialog.setOnDismissListener(() -> cheatedExit());
-                            dialog.showForResult(isAccepted -> cheatedExit()); 
+                            runOnUiThread(() -> {
+                                ConfirmDialogFragment dialog = new ConfirmDialogFragment()
+                                    .setMessage(R.string.message_autoclicker_detected);
+                                dialog.setOnDismissListener(() -> forcedExit());
+                                dialog.showForResult(isAccepted -> forcedExit());
+                            });
                             autoclickerDialogShown = true;
                         }
                     }
                 }
-                handler.postDelayed(this, 1000);
-            }
-        });
+            }, 0, 1, TimeUnit.SECONDS);
     }
 
     public long getVersionCode() {
@@ -846,15 +850,6 @@ public class MainActivity extends BaseGameActivity implements
             Debug.e("PackageManager: " + e.getMessage(), e);
         }
         return versionCode;
-    }
-
-	public boolean isAppInstalled(String uri) {
-        PackageManager pm = getPackageManager();
-        try {
-            pm.getPackageInfo(uri, PackageManager.GET_ACTIVITIES);
-            return true;
-        }catch(PackageManager.NameNotFoundException e) {}
-        return false;
     }
 
     private boolean checkPermissions() {

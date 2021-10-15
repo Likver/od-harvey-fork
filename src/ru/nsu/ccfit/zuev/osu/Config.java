@@ -41,7 +41,6 @@ public class Config {
         showFPS,
         sliderBorders,
         complexAnimations,
-        multitouch,
         playMusicPreview,
         showCursor,
         accurateSlider,
@@ -69,7 +68,8 @@ public class Config {
         receiveAnnouncements,
         useSuperSlider,
         enableStoryboard,
-        safeBeatmapBg;
+        safeBeatmapBg,
+        trianglesAnimation;
 
     private static int RES_WIDTH,
         RES_HEIGHT,
@@ -110,6 +110,7 @@ public class Config {
         metronomeSwitch = Integer.parseInt(prefs.getString("metronomeswitch", "1"));
         showScoreboard = prefs.getBoolean("showscoreboard", true);
         enableStoryboard = prefs.getBoolean("enableStoryboard", false);
+        trianglesAnimation = prefs.getBoolean("trianglesAnimation", true);
 
         setSize();
 
@@ -449,14 +450,6 @@ public class Config {
         Config.complexAnimations = complexAnimations;
     }
 
-    public static boolean isMultitouch() {
-        return multitouch;
-    }
-
-    public static void setMultitouch(final boolean multitouch) {
-        Config.multitouch = multitouch;
-    }
-
     public static boolean isPlayMusicPreview() {
         return playMusicPreview;
     }
@@ -743,6 +736,14 @@ public class Config {
 
     public static void setSafeBeatmapBg(boolean safeBeatmapBg) {
         Config.safeBeatmapBg = safeBeatmapBg;
+    }
+
+    public static boolean isTrianglesAnimation() {
+        return trianglesAnimation;
+    }
+
+    public static void setTrianglesAnimation(boolean trianglesAnimation) {
+        Config.trianglesAnimation = trianglesAnimation;
     }
 
 }

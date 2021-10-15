@@ -222,8 +222,9 @@ public class GameScene implements IUpdateHandler, GameObjectListener,
                 }
 
                 bgset = true;
-                final TextureRegion tex = ResourceManager.getInstance()
-                        .getTextureIfLoaded("::background");
+                final TextureRegion tex = Config.isSafeBeatmapBg() ?
+                    ResourceManager.getInstance().getTexture("menu-background") :
+                    ResourceManager.getInstance().getTextureIfLoaded("::background");
                 if (tex == null) {
                     continue;
                 }
@@ -739,7 +740,7 @@ public class GameScene implements IUpdateHandler, GameObjectListener,
             final Font font = ResourceManager.getInstance().getFont(
                     "smallFont");
             final ChangeableText fpsText = new ChangeableText(Utils.toRes(790),
-                    Utils.toRes(520), font, "FPS: 12.34");
+                    Utils.toRes(520), font, "00.00 FPS");
             final ChangeableText accText = new ChangeableText(Utils.toRes(720),
                     Utils.toRes(480), font, "Avg offset: 0ms     ");
             fpsText.setPosition(Config.getRES_WIDTH() - fpsText.getWidth() - 5, Config.getRES_HEIGHT() - fpsText.getHeight() - 10);
@@ -755,14 +756,18 @@ public class GameScene implements IUpdateHandler, GameObjectListener,
             }
             final ChangeableText fmemText = memText;
             fgScene.registerUpdateHandler(new FPSCounter() {
+                int elapsedInt = 0;
+
                 @Override
                 public void onUpdate(final float pSecondsElapsed) {
                     super.onUpdate(pSecondsElapsed);
-                    fpsText.setText("FPS: " + Math.round(this.getFPS()));
-                    if (offsetRegs != 0) {
+                    elapsedInt++;
+                    fpsText.setText(Math.round(this.getFPS()) + " FPS");
+                    if (offsetRegs != 0 && elapsedInt > 60) {
                         accText.setText("Avg offset: "
                                 + (int) (avgOffset * 1000f / offsetRegs)
                                 + "ms");
+                        elapsedInt = 0;
                     }
                     fpsText.setPosition(Config.getRES_WIDTH() - fpsText.getWidth() - 5, Config.getRES_HEIGHT() - fpsText.getHeight() - 10);
                     accText.setPosition(Config.getRES_WIDTH() - accText.getWidth() - 5, fpsText.getY() - accText.getHeight());
@@ -879,9 +884,11 @@ public class GameScene implements IUpdateHandler, GameObjectListener,
         if (objects.isEmpty() == false)
             lastObjectTme = objects.getLast().getTime();
 
-        progressBar = new SongProgressBar(this, bgScene, lastObjectTme, objects
-                .getFirst().getTime(), new PointF(0, Config.getRES_HEIGHT() - 7), Config.getRES_WIDTH(), 7);
-        progressBar.setProgressRectColor(new RGBAColor(153f / 255f, 204f / 255f, 51f / 255f, 0.4f));
+        if(!Config.isHideInGameUI()) { 
+            progressBar = new SongProgressBar(this, bgScene, lastObjectTme, objects
+                    .getFirst().getTime(), new PointF(0, Config.getRES_HEIGHT() - 7), Config.getRES_WIDTH(), 7);
+            progressBar.setProgressRectColor(new RGBAColor(153f / 255f, 204f / 255f, 51f / 255f, 0.4f));
+        }
 
         if (Config.getErrorMeter() == 1
                 || (Config.getErrorMeter() == 2 && replaying)) {
