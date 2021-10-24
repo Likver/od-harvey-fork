@@ -126,7 +126,7 @@
         <ListPreference android:entries="@array/metronome_switch_names" android:title="@string/opt_metronome_switch_title"
             android:key="metronomeswitch" android:summary="@string/opt_metronome_switch_summary"
             android:defaultValue="1" android:entryValues="@array/metronome_switch_values"/>
-        <CheckBoxPreference android:summary="@string/opt_beatmap_sounds_summary" android:title="@string/opt_beatmap_sounds_title"
+        <CheckBoxPreference android:summary="@string/opt_sound_summary" android:title="@string/opt_sound_title"
             android:key="beatmapSounds" android:defaultValue="true"/>
         <CheckBoxPreference android:key="musicpreview" android:defaultValue="true"
             android:title="@string/opt_musicpreview_title"
@@ -143,7 +143,7 @@
             android:summary="@string/opt_directory_summary"
             android:defaultValue="/sdcard/osu!droid/Songs"/>
         <CheckBoxPreference android:key="scandownload" android:summary="@string/opt_scandownload_summary"
-        android:title="@string/opt_scandownload_title" android:defaultValue="false"/>
+            android:title="@string/opt_scandownload_title" android:defaultValue="false"/>
         <Preference android:key="clear" android:title="@string/opt_clear_title"
             android:summary="@string/opt_clear_summary"/>
         <Preference android:key="clear_properties" android:title="@string/opt_clearprops_title"

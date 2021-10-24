@@ -29,6 +29,7 @@ import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -850,6 +851,12 @@ public class MainActivity extends BaseGameActivity implements
             Debug.e("PackageManager: " + e.getMessage(), e);
         }
         return versionCode;
+    }
+
+    public float getRefreshRate() {
+        return ((WindowManager) getSystemService(Context.WINDOW_SERVICE))
+            .getDefaultDisplay()
+            .getRefreshRate();
     }
 
     private boolean checkPermissions() {
