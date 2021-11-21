@@ -105,6 +105,9 @@
 	<string name="replay_cantdownload">Cannot download replay</string>
 	<string name="replay_wrongmap">Replay doesn\'t match the map</string>
 	<string name="replay_corrupted">Replay file is corrupted</string>
+	
+	<string name="hint_usernamelogin">Username</string>
+	<string name="hint_passwordlogin">Password</string>
 
 	<string name="online_registration">Registration</string>
 	<string name="online_registration_process">Registering...</string>
