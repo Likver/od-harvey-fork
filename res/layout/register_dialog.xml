@@ -10,6 +10,23 @@
   android:layout_width="fill_parent"
   android:weightSum="1"
   android:minWidth="300dp" android:layout_height="match_parent">
+			
+			<RelativeLayout
+        android:id="@+id/colorDiv"
+        android:alpha="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:background="@color/triangleBackground"
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <com.edlplan.ui.TriangleEffectView
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+    </RelativeLayout>
     
     <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:id="@+id/register_error_text" android:textColor="#FF0000"></TextView>
     <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/username_edit" android:hint="@string/hint_login" android:inputType="textPersonName">
