@@ -104,8 +104,8 @@
     <string name="opt_skin_title">Usar skins de los mapas</string>
     <string name="opt_skin_summary">Cargar skins de los mapas si es posible</string>
 
-    <string name="opt_sound_title">Usar sonidos de los mapas</string>
-    <string name="opt_sound_summary">Cargar sonidos de los mapas si es posible</string>
+    <string name="opt_beatmap_sounds_title">Usar sonidos de los mapas</string>
+    <string name="opt_beatmap_sounds_summary">Cargar sonidos de los mapas si es posible</string>
 
     <string name="opt_largeimages_title">Contador</string>
     <string name="opt_largeimages_summary">Muestra un contador al principio del mapa si está disponible</string>
