@@ -106,7 +106,7 @@
 	<string name="replay_wrongmap">Replay doesn\'t match the map</string>
 	<string name="replay_corrupted">Replay file is corrupted</string>
 	
-	<string name="usernamelogin">Login</string>
+	<string name="usernamelogin_title">Login</string>
 	<string name="hint_usernamelogin">Username</string>
 	<string name="hint_passwordlogin">Password</string>
 
