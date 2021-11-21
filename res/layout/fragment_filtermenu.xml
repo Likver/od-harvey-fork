@@ -64,7 +64,7 @@
 
             <com.edlplan.ui.TriangleEffectView
                 android:layout_width="match_parent"
-                android:layout_height="5dp" />
+                android:layout_height="match_parent" />
         
 
                     <Button
@@ -72,9 +72,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:background="#660066"
+                        android:background="#FFFFFF"
                         android:minWidth="80dp"
-                        android:textColor="#ffffff"
+                        android:textColor="#000000"
                         android:textSize="13sp" />
 		
 	  </RelativeLayout>
