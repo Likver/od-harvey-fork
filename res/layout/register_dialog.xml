@@ -13,18 +13,18 @@
 			
 			<RelativeLayout
         android:id="@+id/colorDiv"
-        android:alpha="0.5"
+        android:alpha="0.8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <View
             android:background="@color/triangleBackground"
             android:layout_width="match_parent"
-            android:layout_height="5dp" />
+            android:layout_height="10dp" />
 
         <com.edlplan.ui.TriangleEffectView
             android:layout_width="match_parent"
-            android:layout_height="5dp" />
+            android:layout_height="10dp" />
 
     </RelativeLayout>
     
@@ -40,6 +40,23 @@
         <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/cancel_btn" android:text="@string/dialog_cancel" android:layout_gravity="left" android:layout_weight="0.40"></Button>
     </LinearLayout>
     
+	    <RelativeLayout
+        android:id="@+id/colorDiv"
+        android:alpha="0.8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:background="@color/triangleBackground"
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <com.edlplan.ui.TriangleEffectView
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+    </RelativeLayout>
+	    
         </LinearLayout>
     </ScrollView>
     
