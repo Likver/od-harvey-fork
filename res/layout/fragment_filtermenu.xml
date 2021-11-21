@@ -52,6 +52,20 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:hint="@string/menu_search_filter" />
+			
+			  <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/triangleBackground" />
+
+            <com.edlplan.ui.TriangleEffectView
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+        
 
                     <Button
                         android:id="@+id/sortButton"
@@ -62,6 +76,8 @@
                         android:minWidth="80dp"
                         android:textColor="#ffffff"
                         android:textSize="13sp" />
+		
+	  </RelativeLayout>
 
                 </LinearLayout>
 
