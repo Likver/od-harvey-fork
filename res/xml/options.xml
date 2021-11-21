@@ -15,10 +15,11 @@
         </PreferenceCategory>
 
         <PreferenceCategory android:key="onlineOption_user" android:title="@string/opt_onlineOpt_user">
-            <EditTextPreference android:key="onlineUsername" android:title="@string/opt_login_title"
-                android:summary="@string/opt_login_summary"/>
-            <EditTextPreference android:key="onlinePassword" android:title="@string/opt_password_title"
-                android:inputType="textPassword" android:summary="@string/opt_password_summary"/>
+		
+            <Preference android:key="onlineLogin" android:title="@string/opt_login_title"
+                android:summary="@string/opt_login_summary"
+            android:key="onlinePassword" android:inputType="textPassword" />
+		
             <Preference android:key="registerAcc" android:title="@string/opt_register_title"
                 android:summary="@string/opt_register_summary"/>
         </PreferenceCategory>
