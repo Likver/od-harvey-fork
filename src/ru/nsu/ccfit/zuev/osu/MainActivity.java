@@ -4,6 +4,7 @@ import android.Manifest;
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.ContentResolver;
@@ -19,10 +20,17 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.os.*;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+
 
 import androidx.annotation.NonNull;
 import androidx.preference.PreferenceManager;
 import androidx.core.content.PermissionChecker;
+
+
 
 import android.util.DisplayMetrics;
 import android.view.Gravity;
@@ -31,7 +39,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.accessibility.AccessibilityManager;
+import android.view.LayoutInflater;
 import android.widget.EditText;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
@@ -61,6 +72,7 @@ import org.anddev.andengine.util.Debug;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.math.RoundingMode;
 import java.security.Security;
 import java.text.DecimalFormat;
@@ -875,4 +887,307 @@ public class MainActivity extends BaseGameActivity implements
 			return false;
 		}
 	}
+	
+	public class MainActivity extends FragmentActivity
+{
+	@Override
+	protected void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		if(savedInstanceState == null){
+			new LoginDialogFrag()
+				.show(getSupportFragmentManager(), "login_dialog");
+		}
+	}
+	
+	
+	public static class LoginDialogFrag extends DialogFragment implements
+		HeadlessAsyncTask.Callback<LoginModel, LoginModel>,
+		View.OnClickListener
+	{
+		private static final String STATE_MODEL = "stateModel";
+		
+		private HeadlessFragment mHeadless;
+		
+		private View     mPanel;
+		private EditText mUsername;
+		private EditText mPassword;
+		private TextView mError;
+		private View     mProgress;
+		
+		private LoginAsyncTask mTask;
+		private LoginModel     mModel;
+		
+		
+		@Override
+		public void onCreate(Bundle savedInstanceState)
+		{
+			super.onCreate(savedInstanceState);
+			if(savedInstanceState != null){
+				mModel = (LoginModel)savedInstanceState.getSerializable(STATE_MODEL);
+			}
+		}
+		
+		@Override
+		public void onSaveInstanceState(Bundle outState)
+		{
+			super.onSaveInstanceState(outState);
+			outState.putSerializable(STATE_MODEL, mModel);
+		}
+		
+		@Override
+		public void onActivityCreated(Bundle savedInstanceState)
+		{
+			super.onActivityCreated(savedInstanceState);
+			mHeadless = HeadlessFragment.get(getFragmentManager());
+			mTask = (LoginAsyncTask)mHeadless.getBackgroundTask();
+			if(mTask != null){
+				mTask.setCallback(this);
+			}
+			updateViewState();
+		}
+		
+		@Override
+		public void onCancel(DialogInterface dialog)
+		{
+			super.onCancel(dialog);
+			if(mTask != null){
+				mTask.cancel(false);
+			}
+		}
+		
+		@Override
+		public void onDetach()
+		{
+			super.onDetach();
+			if(mTask != null){
+				mTask.setCallback(null);
+			}
+		}
+		
+		@Override
+		public Dialog onCreateDialog(Bundle savedInstanceState)
+		{
+			Dialog dialog = super.onCreateDialog(savedInstanceState);
+			dialog.setTitle("App Login");
+			return dialog;
+		}
+		
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+		{
+			return inflater.inflate(R.layout.dialog_login, container, false);
+		}
+		
+		@Override
+		public void onViewCreated(View view, Bundle savedInstanceState)
+		{
+			super.onViewCreated(view, savedInstanceState);
+			mPanel    = view.findViewById(R.id.panel);
+			mUsername = (EditText)view.findViewById(R.id.username);
+			mPassword = (EditText)view.findViewById(R.id.password);
+			mError    = (TextView)view.findViewById(R.id.error);
+			mProgress = view.findViewById(R.id.progress);
+			setButton(DialogInterface.BUTTON_NEUTRAL, "Login", this);
+		}
+		
+		private boolean setButton(int which, CharSequence text, View.OnClickListener listener)
+		{
+			final int id;
+			switch(which){
+				case DialogInterface.BUTTON_POSITIVE: id = android.R.id.button1; break;
+				case DialogInterface.BUTTON_NEUTRAL:  id = android.R.id.button2; break;
+				case DialogInterface.BUTTON_NEGATIVE: id = android.R.id.button3; break;
+				default: throw new IllegalArgumentException("Bad button code");
+			}
+			final Button button = (Button)getView().findViewById(id);
+			if(button != null){
+				button.setText(text);
+				button.setOnClickListener(listener);
+				button.setVisibility(listener != null ? View.VISIBLE : View.GONE);
+				return true;
+			}
+			return false;
+		}
+		
+		@Override
+		public void onClick(View v)
+		{
+			mTask = new LoginAsyncTask();
+			mHeadless.setBackgroundTask(mTask);
+			mTask.setCallback(this);
+			mModel = new LoginModel(
+				mUsername.getText().toString(),
+				mPassword.getText().toString());
+			mTask.execute(mModel);
+		}
+		
+		private void updateViewState()
+		{
+			boolean waiting = (mModel != null) ? mModel.waiting : false;
+			mPanel.setVisibility(waiting ? View.INVISIBLE : View.VISIBLE);
+			mProgress.setVisibility(waiting ? View.VISIBLE : View.INVISIBLE);
+			mError.setText((mModel != null && mModel.error != null) ? 
+				mModel.error.getMessage() : null);
+		}
+		
+		@Override
+		public void onPreExecute()
+		{
+			updateViewState();
+		}
+		
+		@Override
+		public void onProgressUpdate(LoginModel... values)
+		{
+			// Do nothing
+		}
+
+		@Override
+		public void onPostExecute(LoginModel result)
+		{
+			result.waiting = false;
+			mModel = result;
+			updateViewState();
+			if(result.success){
+				dismiss();
+			}
+		}
+		
+		@Override
+		public void onCancelled(LoginModel result)
+		{
+			// do nothing
+		}
+		
+		
+		private static class LoginAsyncTask extends HeadlessAsyncTask<LoginModel, LoginModel, LoginModel>
+		{
+			@Override
+			protected LoginModel doInBackground(LoginModel... params)
+			{
+				LoginModel model = params[0];
+				try{
+					Thread.sleep(3000);
+					if(model.username.equals("admin") && model.password.equals("admin")){
+						model.success = true;
+					}
+					else{
+						throw new IllegalArgumentException("Bad username or password");
+					}
+				}
+				catch(Exception e){
+					model.success = false;
+					model.error = e;
+				}
+				
+				return model;
+			}
+		}
+	}
+	
+	private static class LoginModel implements Serializable
+	{
+		private static final long serialVersionUID = 1L;
+		
+		public String username;
+		public String password;
+		public Throwable error;
+		public boolean success;
+		public boolean waiting;
+		
+		public LoginModel(String username, String password)
+		{
+			this.username = username;
+			this.password = password;
+			this.waiting  = true;
+		}
+	}
+	
+	public static class HeadlessFragment extends Fragment
+	{
+		private HeadlessAsyncTask<?, ?, ?> mBackgroundTask;
+		
+		
+		public static HeadlessFragment get(FragmentManager fm)
+		{
+			HeadlessFragment headless = (HeadlessFragment)fm.findFragmentByTag("headless");
+			if(headless == null){
+				headless = new HeadlessFragment();
+				fm.beginTransaction()
+					.add(headless, "headless")
+					.commit();
+			}
+			return headless;
+		}
+		
+		@Override
+		public void onCreate(Bundle savedInstanceState)
+		{
+			super.onCreate(savedInstanceState);
+			setRetainInstance(true);
+		}
+		
+		public void setBackgroundTask(HeadlessAsyncTask<?, ?, ?> backgroundTask)
+		{
+			mBackgroundTask = backgroundTask;
+		}
+		
+		public HeadlessAsyncTask<?, ?, ?> getBackgroundTask()
+		{
+			return mBackgroundTask;
+		}
+	}
+	
+	public static abstract class HeadlessAsyncTask<Param, Progress, Result> extends AsyncTask<Param, Progress, Result>
+	{
+		private Callback<Progress, Result> mCallback;
+		
+		
+		public void setCallback(Callback<Progress, Result> callback)
+		{
+			mCallback = callback;
+		}
+		
+		@Override
+		protected void onPreExecute()
+		{
+			if(mCallback != null){
+				mCallback.onPreExecute();
+			}
+		}
+		
+		@Override
+		protected void onProgressUpdate(Progress... values)
+		{
+			if(mCallback != null){
+				mCallback.onProgressUpdate(values);
+			}
+		}
+		
+		@Override
+		protected void onPostExecute(Result result)
+		{
+			if(mCallback != null){
+				mCallback.onPostExecute(result);
+			}
+		}
+		
+		@Override
+		protected void onCancelled(Result result)
+		{
+			if(mCallback != null){
+				mCallback.onCancelled(result);
+			}
+		}
+		
+		public static interface Callback<Progress, Result>
+		{
+			public void onPreExecute    ();
+			public void onProgressUpdate(Progress... values);
+			public void onPostExecute   (Result result);
+			public void onCancelled     (Result result);
+		}
+	}
+}
 }
