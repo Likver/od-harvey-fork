@@ -154,38 +154,39 @@
 
 	
 	<!-- new data after 1.6.7(beta1) -->
-        <string name="beta_checking_upgrade">Checking Upgrade...</string>
-	<string name="beta_check_upgrade_error">Failed to check new version, try again later</string>
-	<string name="beta_you_are_the_latest_version">You are already using the latest version</string>
-	<string name="beta_downloading">Downloading</string>
-	<string name="beta_click_to_view">Click to view</string>
-	<string name="beta_click_to_install">Install</string>
-	<string name="beta_click_to_retry">Retry</string>
-	<string name="beta_click_to_continue">Continue</string>
-	<string name="beta_download_success">Download successful</string>
-	<string name="beta_download_error">Download failed</string>
-	<string name="beta_have_new_version">New version available</string>
-        <string name="menu_map_updatable">Update beatmap</string>
-        <string name="message_loaded_skin">Successfully applied new skin!</string>
+        <string name="beta_checking_upgrade">Analizado actualización</string>
+	<string name="beta_check_upgrade_error">Ha habido un problema al analizar la actualización, prueba más tarde</string>
+	<string name="beta_you_are_the_latest_version">Ya estás usando la versión mas reciente</string>
+	<string name="beta_downloading">Descargando</string>
+	<string name="beta_click_to_view">Presiona para ver</string>
+	<string name="beta_click_to_install">Instalar</string>
+	<string name="beta_click_to_retry">Reintentar</string>
+	<string name="beta_click_to_continue">Continuar</string>
+	<string name="beta_download_success">Descarga completa</string>
+	<string name="beta_download_error">Descarga fallida</string>
+	<string name="beta_have_new_version">Hay una nueva versión disponible!</string>
+        <string name="menu_map_updatable">Subir beatmap</string>
+        <string name="message_loaded_skin">Se ha aplicado la nueva skin!</string>
 
-	<string name="message_error_dir_not_found">Directory is not found</string>
+	<string name="message_error_dir_not_found">No se ha encontrado el directorio</string>
 
 	<string name="message_update_hint">Long press to update</string>
 	<string name="message_update_download_success">Update Successful!</string>
 	<string name="message_update_download_fail">Update fail, try again later</string>
 	<string name="message_update_ppy_unavailable">This map can not be downloaded on ppy\n\n</string>
 
-	<string name="message_low_storage_space">Storage space is low. Free Storage: %s GB. This may cause replay/score submission bugs.</string>
-        <string name="close_this_page">Close this page</string>
-        <string name="markdown_title">Markdown Title</string>
-        <string name="click_to_see_change_list">Click to see change list</string>
+	<string name="message_low_storage_space">Queda poca memoria en el almacenamiento: %s GB. Esto puede causar bugs y problemas al enviar score o descargar repeticiones.</string>
+        <string name="close_this_page">Cerrar</string>
+        <string name="markdown_title"> Título</string>
+        <string name="click_to_see_change_list">Lista de cambios</string>
 
 	<string name="changelog_title">Changelog</string>
-	<string name="unranked_features">↓ Unranked features ↓</string>
+	<string name="unranked_features">↓ Unranked ↓</string>
 
-        <string name="str_save_failed_replay">Click here to save replay</string>
-        <string name="message_save_replay_successful">Save failed replay success!</string>
-	<string name="message_save_replay_failed">Save replay failed</string>
+        <string name="str_save_failed_replay">Presiona para guardar la repetición fallida</string>
+        <string name="message_save_replay_successful">Se ha guardado la repetición!</string>
+	<string name="message_save_replay_failed">No se ha podido guardar la repetición</string>
 
-        <string name="message_autoclicker_detected">Please disable your accessibility service(s) with the Perform Gestures permission before playing the game.</string>
+        <string name="message_autoclicker_detected">Se ha detectado un auto-clicker activado, porfavor desactivalo para jugar</string>
+	
 </resources>
