@@ -22,6 +22,7 @@
         <item>25%</item>
         <item>0%</item>
     </string-array>
+
     <string-array name="bg_brightness_values">
         <item>100</item>
         <item>75</item>
@@ -84,62 +85,60 @@
         <item>80</item>
     </string-array>
 	
-    <string name="opt_main">Settings</string>
+    <string name="opt_onlineOpt">Cuenta</string>
 
-    <string name="opt_onlineOpt">Account Option</string>
+    <string name="opt_onlineOpt_normal">ONLINE</string>
 
-    <string name="opt_onlineOpt_normal">Online Option</string>
+    <string name="opt_onlineOpt_user">Opciones de usuario</string>
 
-    <string name="opt_onlineOpt_user">User Option</string>
+    <string name="opt_offline">OFFLINE</string>
 
-    <string name="opt_offline">Offline Option</string>
+    <string name="opt_graphics">Gráficos</string>
 
-    <string name="opt_graphics">Graphics</string>
+    <string name="opt_beatmaps">Directorios y otros</string>
 
-    <string name="opt_beatmaps">Library</string>
+    <string name="opt_bg_title">Calidad de fondos</string>
+    <string name="opt_bg_summary">Reducir la calidad de los fondos puede ayudar a aumentar el rendimiento</string>
 
-    <string name="opt_bg_title">Background quality</string>
+    <string name="opt_skin_title">Usar skins de los mapas</string>
+    <string name="opt_skin_summary">Cargar skins de los mapas si es posible</string>
 
-    <string name="opt_bg_summary">Reduce the quality of the background images to increase performance</string>
+    <string name="opt_beatmap_sounds_title">>Usar sonidos de los mapas</string>
+    <string name="opt_beatmap_sounds_summary">Cargar sonidos de los mapas si es posible</string>
 
-    <string name="opt_skin_title">Beatmap skins</string>
-    <string name="opt_skin_summary">Load beatmap-specific skin if available</string>
+    <string name="opt_largeimages_title">Contador</string>
+    <string name="opt_largeimages_summary">Muestra un contador al principio del mapa si está disponible</string>
 
-    <string name="opt_beatmap_sounds_title">Beatmap sounds</string>
-    <string name="opt_beatmap_sounds_summary">Load beatmap-specific sounds if available</string>
+    <string name="opt_sound_volume_title">Volumen de golpes</string>
+    <string name="opt_sound_volume_summary">Volumen de los golpes (0-100)</string>
 
-    <string name="opt_largeimages_title">Countdown</string>
-    <string name="opt_largeimages_summary">Show countdown at the beginning of a map that has it enabled</string>
+    <string name="opt_bgm_volume_title">Volumen de la musica</string>
+    <string name="opt_bgm_volume_summary">Volumen de la música de los mapas (0-100)</string>
 
-    <string name="opt_sound_volume_title">Sound volume</string>
-    <string name="opt_sound_volume_summary">Volume of sound effects or hit sounds</string>
+    <string name="opt_offset_title">Configurar offset</string>
+    <string name="opt_offset_summary">Offset de la musica en ms (valores positivos indican golpes mas tempranos)</string>
 
-    <string name="opt_bgm_volume_title">BGM volume</string>
-    <string name="opt_bgm_volume_summary">Volume of the background music</string>
+    <string name="opt_special">Especial</string>
+	
+    <string name="opt_taiko_title">Cargar las canciones de T-Aiko!</string>
+    <string name="opt_taiko_summary">Carga las canciones que esten en el directorio del modo T-Aiko!</string>
 
-    <string name="opt_offset_title">Global offset</string>
-    <string name="opt_offset_summary">Music offset in ms (positive values mean earlier)</string>
+    <string name="opt_deleteosz_title">Borrar archivos (.osz)</string>
+    <string name="opt_deleteosz_summary">Borra automáticamente los archivos (.osz) después de importar los mapas</string>
 
-    <string name="opt_special">Special</string>
-    <string name="opt_taiko_title">Load T-Aiko! songs</string>
-    <string name="opt_taiko_summary">Load songs also from T-Aiko song directory</string>
+    <string name="opt_directory_title">Directorio de los mapas</string>
+    <string name="opt_directory_summary">(Por defecto: /sdcard/osu!droid/Songs)</string>
 
-    <string name="opt_deleteosz_title">Delete .osz</string>
-    <string name="opt_deleteosz_summary">Delete .osz files after importing</string>
-
-    <string name="opt_directory_title">Beatmap location</string>
-    <string name="opt_directory_summary">Path to directory containing beatmaps (default: /mnt/sdcard/osu!droid/Songs)</string>
-
-    <string name="opt_clear_title">Library cache</string>
-    <string name="opt_clear_summary">Clear the library cache</string>
+    <string name="opt_clear_title">Borrar caché</string>
+    <string name="opt_clear_summary">Elimina la caché del juego</string>
 
     <!-- <string name="opt_doublesound_title">Double hit sounds</string>
     <string name="opt_doublesound_summary">Make hit sounds closer to original osu!</string> -->
 
-    <string name="opt_sound">Sound</string>
+    <string name="opt_sound">Audio</string>
 
-    <string name="opt_fps_title">FPS</string>
-    <string name="opt_fps_summary">Display (frames per second) during gameplay</string>
+    <string name="opt_fps_title">Mostrar FPS</string>
+    <string name="opt_fps_summary">Muestra un contador de FPS mientras juegas</string>
 
     <!-- <string name="opt_skipoffset_title">Skip offset</string>
     <string name="opt_skipoffset_summary">This offset will be added when you press the &quot;Skip&quot; button. Enter -1 for auto offset</string> -->
@@ -150,20 +149,21 @@
     <string name="opt_nativeplayer_title">Use built-in player</string>
     <string name="opt_nativeplayer_summary">Use built-in player for more accurate timing (doesn\'t support .ogg files)</string>
 
-    <string name="opt_metronome_switch_title">Metronome switch</string>
-    <string name="opt_metronome_switch_summary">Enable metronome sound effect (only Nightcore mod)</string>
+    <string name="opt_metronome_switch_title">Sonido de Metronomo</string>
+    <string name="opt_metronome_switch_summary">Activa el sonido de un metrónomo mientras juegas</string>
 
     <!-- <string name="opt_vbroffset_title">VBR offset</string>
     <string name="opt_vbroffset_summary">Offset for mp3\'s encoded with variable bitrate (built-in player only)</string> -->
 
-    <string name="opt_sliderborders_title">Slider borders</string>
-    <string name="opt_sliderborders_summary">Draw borders along slider tracks. Disable for better performance</string>
+    <string name="opt_sliderborders_title">Bordes de sliders</string>
+    <string name="opt_sliderborders_summary">Muestra los bordes de los sliders</string>
 
-    <string name="opt_complexanimations_title">Complex effects</string>
-    <string name="opt_complexanimations_summary">Enable advanced graphical effects (eg. snaking sliders). Disable for better performance</string>
+    <string name="opt_complexanimations_title">Efectos avanzados</string>
+    <string name="opt_complexanimations_summary">Activa efectos avanzados (ej: sliders serpenteantes etc..). Desactivalo para mejor rendimiento</string>
 
 
-    <string name="opt_other_title">Miscellaneous</string>
+    <string name="opt_other_title">Otros</string>
+	
     <string name="opt_multitouch_title">Multi-touch</string>
     <string name="opt_multitouch_summary">Enable multi-touch input if it\'s available</string>
 
@@ -185,7 +185,6 @@
     <string name="opt_showcursor_title">Cursor</string>
     <string name="opt_showcursor_summary">Show cursor under fingers during gameplay</string>
 
-
     <string name="opt_demoSpline_title">Demo Spline</string>
     <string name="opt_demoSpline_summary">Use another spline algorithm for sliders. (experimental, may cause some unexpected problems.)</string>
 
@@ -193,6 +192,7 @@
     <string name="opt_clearprops_summary">Forced clear of all map-specific data (eg. per-map offsets)</string>
 
     <string name="opt_online">Online</string>
+	
     <string name="opt_online_title">Show online options</string>
     <string name="opt_online_summary"></string>
 
@@ -210,7 +210,6 @@
 
     <string name="opt_loadavatar_title">Load Avatar</string>
     <string name="opt_loadavatar_summary">Load without WiFi connection.</string>
-
 
     <string name="opt_error_meter_display_title">Hit error meter</string>
     <string name="opt_error_meter_display_summary">Display hit error meter</string>
@@ -243,11 +242,9 @@
     <string name="opt_download_extension_title">Download extension</string>
 
     <string name="opt_syncmusic_title">Low-latency synchronisation</string>
-
     <string name="opt_syncmusic_summary">"Disable if your device doesn't support low-latency audio"</string>
 
     <string name="opt_savereplays_title">Replays</string>
-
     <string name="opt_savereplays_summary">Save replays for local records</string>
 
     <string name="opt_bursts_title">Burst effects</string>
@@ -262,7 +259,7 @@
     <string name="opt_particles_title">Particle effects</string>
     <string name="opt_particles_summary">Show particle-based effects like cursor trail</string>
 
-	<string name="opt_long_trail_title">Long cursor trail</string>
+    <string name="opt_long_trail_title">Long cursor trail</string>
     <string name="opt_long_trail_summary">Show longer cursor trail, if Particle effects is on</string>
 
     <string name="opt_bgbrightness_title">Background brightness</string>
@@ -273,15 +270,16 @@
 
     <string name="opt_enable_pp_title">PerformancePoint System(PP)</string>
     <string name="opt_enable_pp_summary">A simple offline pp system. Just for fun :)</string>
+	
     <string name="opt_clear_pp_title">Reset Performance Points(PP)</string>
     <string name="opt_clear_pp_summary"></string>
 
     <string name="opt_combo_colors_title">Combo Colors</string>
     <string name="opt_combo_colors_summary">Use custom combo\'s color</string>
-
-
+	
 
     <!-- new data after 1.6.7(beta1) -->
+	
     <string name="opt_update_title">Check for updates</string>
     <string name="opt_update_summary">Check for available updates</string>
 
@@ -297,8 +295,8 @@
     <string name="opt_apikey_title">[Beta] osu!ppy API Key</string>
     <string name="opt_apikey_summary">Uses osu!ppy API to get beatmaps\' information. &#xD;If key is invalid, uses bloodcat instead (might be outdated/bad connection)</string>
 
-    <string name="opt_show_scoreboard_summary">Show scoreboard of selected beatmap during game</string>
     <string name="opt_show_scoreboard_title">Show scoreboard</string>
+    <string name="opt_show_scoreboard_summary">Show scoreboard of selected beatmap during game</string>
 
     <string name="opt_skinpath_title">Select skin</string>
     <string name="opt_skinpath_summary">Select skin from top skin directory</string>
@@ -309,20 +307,22 @@
     <string name="opt_enableStoryboard_summary">Your phone will be very hot!</string>
     <string name="opt_enableStoryboard_title">Enable Storyboard</string>
 
-    <string name="opt_scandownload_summary">Scan /Download directory for new beatmaps (Might not work with SD Card)</string>
     <string name="opt_scandownload_title">Scan Download</string>
+    <string name="opt_scandownload_summary">Scan /Download directory for new beatmaps (Might not work with SD Card)</string>
 
     <string name="opt_superSlider_title">Super Slider</string>
     <string name="opt_superSlider_summary">Perfect shape slider!</string>
 
     <string name="opt_changespeed_title">Speed Modify</string>
     <string name="opt_forcear_title">Force AR</string>
+	
     <string name="opt_enablenc_whenspeedchange_title">Enable pitch shift in speed modify</string>
     <string name="opt_enablespeedchange_title">Enable speed modify</string>
     <string name="opt_enableforcear_title">Enable force AR</string>
+	
 
-	<string name="opt_calculate_slider_path_in_game_start_title">Calculate sliderpaths in game start</string>
-	<string name="opt_calculate_slider_path_in_game_start_summary">Increases performance in beatmaps where complex sliders are present, but increases beatmap load time</string>
+    <string name="opt_calculate_slider_path_in_game_start_title">Calculate sliderpaths in game start</string>
+    <string name="opt_calculate_slider_path_in_game_start_summary">Increases performance in beatmaps where complex sliders are present, but increases beatmap load time</string>
 
     <string name="opt_display_score_pp_title">Display PP in score</string>
     <string name="opt_display_score_pp_summary">Displays PP value in score result screen</string>
