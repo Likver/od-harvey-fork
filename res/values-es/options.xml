@@ -329,7 +329,7 @@
     <string name="opt_display_score_pp_title">Mostrar PP en la pantalla de resultados</string>
     <string name="opt_display_score_pp_summary">Displays PP value in score result screen</string>
 
-    <string name="opt_setplayfield_title">Tamaño de juego</string>
+    <string name="opt_setplayfield_title">Tamaño del campo de juego</string>
     <string name="opt_setplayfield_summary"></string>
 
     <string name="opt_shrink_playfield_downwards_title">Mover campo de juego hacia abajo</string>
