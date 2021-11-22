@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="message_error">Error: %s</string>
-	<string name="message_error_createdir">Cannot create %s</string>
-	<string name="message_error_multitouch">Multitouch is not supported by your device</string>
-	<string name="message_error_audio">Cannot initialize audio. Please, restart the song</string>
-	<string name="message_error_sdcard">External storage is not mounted</string>
-	<string name="message_error_sdcardread">External storage is read only</string>
-	<string name="message_error_open">Cannot open %s</string>
-	<string name="message_error_mapmode">Invalid map mode: %s</string>
-	<string name="message_error_connect">Cannot connect to server</string>
-	<string name="message_error_connectlimit">Reached limit of connection errors</string>
-	<string name="message_error_download">Cannot download %s</string>
+	<string name="message_error_createdir">No se puede crear %s</string>
+	<string name="message_error_multitouch">Tu dispositivo no soporta la función Multitouch.</string>
+	<string name="message_error_audio">No se puede iniciar el audio. Prueba a reiniciar el mapa</string>
+	<string name="message_error_sdcard">No se ha encontrado ninguna memoria externa</string>
+	<string name="message_error_sdcardread">La memoria externa esta en modo de "Solo lectura"</string>
+	<string name="message_error_open">No se puede abrir %s</string>
+	<string name="message_error_mapmode">Modo del mapa invalido: %s</string>
+	<string name="message_error_connect">No se puede conectar al servidor</string>
+	<string name="message_error_connectlimit">Se ha alcanzado el limite de errores de conexión</string>
+	<string name="message_error_download">No se puede descargar %s</string>
 
-	<string name="message_standardplayer">Switching to standard player</string>
-	<string name="message_connecting">Connecting to server...</string>
-	<string name="message_downloaded">%s downloaded!</string>
+	<string name="message_standardplayer">Cambiando al reproductor estandar</string>
+	<string name="message_connecting">Conectando al servidor...</string>
+	<string name="message_downloaded">%s se ha descargado!</string>
 
-	<string name="message_lib_update">Updating library...</string>
-	<string name="message_lib_caching">Caching library... It may take few minutes</string>
-	<string name="message_lib_complete">Caching complete. Found %d beatmaps</string>
-	<string name="message_lib_cleared">Cache cleared</string>
-	<string name="message_lib_importing">Importing beatmap...</string>
-	<string name="message_lib_importing_several">Found %s archived beatmaps. Importing...</string>
-	<string name="message_lib_imported">\"%s\" has been imported!</string>
+	<string name="message_lib_update">Actualizando libreria...</string>
+	<string name="message_lib_caching">Cacheando libreria, esto puede tardar unos minutos...</string>
+	<string name="message_lib_complete">Cacheo completo. Se han encontrado %d beatmaps</string>
+	<string name="message_lib_cleared">Se ha limpiado la cache</string>
+	<string name="message_lib_importing">Importando beatmap...</string>
+	<string name="message_lib_importing_several">Se han encontrado %s beatmaps. Importando...</string>
+	<string name="message_lib_imported">\"%s\" se ha importado!</string>
 
 	<string name="message_extension_not_found">No extension app found.</string>
 	<string name="message_open_beatmap_in_extension">Open beatmap in extension</string>
