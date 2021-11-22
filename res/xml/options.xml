@@ -238,10 +238,6 @@
             android:key="playfieldsize" android:summary="@string/opt_setplayfield_summary"
             android:defaultValue="100" android:entryValues="@array/set_playfield_values"/>
 	    
-	<ListPreference android:entries="@array/set_playfield_names" android:title="@string/opt_setplayfield_title"
-            android:key="playfieldsize" android:summary="@string/opt_setplayfield_summary"
-            android:defaultValue="100" android:entryValues="@array/set_playfield_values"/>
-	    
 	<CheckBoxPreference android:key="shrinkPlayfieldDownwards" android:title="@string/opt_shrink_playfield_downwards_title"
             android:summary="@string/opt_shrink_playfield_downwards_summary" android:defaultValue="false"/>
 	    
