@@ -335,21 +335,6 @@
 
     <string name="opt_hide_replay_marquee_title">Ocultar mensaje de repetición</string>
     <string name="opt_hide_replay_marquee_summary">Oculta el mensaje con movimiento cuando ves una repetición</string>
-	
-    <string name="opt_calculate_slider_path_in_game_start_title">Calcular sliders al entrar a un mapa</string>
-    <string name="opt_calculate_slider_path_in_game_start_summary">Mejora el rendimiento en mapas con sliders complejos, pero tarda más en cargar</string>
-
-    <string name="opt_display_score_pp_title">Mostrar PP en la pantalla de resultados</string>
-    <string name="opt_display_score_pp_summary">Displays PP value in score result screen</string>
-
-    <string name="opt_setplayfield_title">Tamaño de juego</string>
-    <string name="opt_setplayfield_summary"></string>
-
-    <string name="opt_shrink_playfield_downwards_title">Mover campo de juego hacia abajo</string>
-    <string name="opt_shrink_playfield_downwards_summary">Hace que el campo de juego se mueva mas abajo de la pantalla</string>
-
-    <string name="opt_hide_replay_marquee_title">Ocultar mensaje de repetición</string>
-    <string name="opt_hide_replay_marquee_summary">Oculta el mensaje con movimiento cuando ves una repetición</string>
 
    <string name="opt_hide_ingame_ui_title">Ocultar UI</string>
     <string name="opt_hide_ingame_ui_summary">Oculta toda la interfaz mientras juegas (ej: vida, scoreboard, combo, accuracy, etc..)</string>
