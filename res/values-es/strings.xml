@@ -27,26 +27,26 @@
 	<string name="message_extension_not_found">No extension app found.</string>
 	<string name="message_open_beatmap_in_extension">Open beatmap in extension</string>
 
-	<string name="dialog_playername_title">Enter player name</string>
-	<string name="dialog_playername_message">Enter your name. It will be used for scoring.</string>
+	<string name="dialog_playername_title">Nombre de jugador</string>
+	<string name="dialog_playername_message">Pon tu nombre de jugador, se usará para enviar tu score en cada mapa.</string>
 	<string name="dialog_ok">Ok</string>
-	<string name="dialog_cancel">Cancel</string>
-	<string name="dialog_search_title">Search</string>
-	<string name="dialog_search_message">Enter search query</string>
-	<string name="dialog_register">Register</string>
+	<string name="dialog_cancel">Cancelar</string>
+	<string name="dialog_search_title">Buscar</string>
+	<string name="dialog_search_message">Consulta de Búsqueda</string>
+	<string name="dialog_register">Registrar</string>
 
 	<string name="dialog_delete_pp_title">Reset your pp?</string>
 	<string name="dialog_delete_pp_make_sure">Really?</string>
 	<string name="dialog_delete_pp_deleted">PP reset</string>
 
-	<string name="dialog_exit_message">Are you sure you want to exit the game?</string>
-	<string name="dialog_exit_yes">Yes</string>
+	<string name="dialog_exit_message">¿Quieres salir del juego?</string>
+	<string name="dialog_exit_yes">Si</string>
 	<string name="dialog_exit_no">No</string>
 
 	<string name="dialog_visit_osu_website_message">Do you want to visit the official osu! website?</string>
-	<string name="dialog_visit_osudroid_website_message">Do you want to visit the official osu!droid website?</string>
+	<string name="dialog_visit_osudroid_website_message">¿Quieres visitar la página oficial de osu!Droid?</string>
 
-        <string name="dialog_visit_profile_page">Do you want to visit your profile page?</string>
+        <string name="dialog_visit_profile_page">Quieres ver tu perfil en la pagina de osu!Droid?</string>
 
 	<string name="favorite_folder">Folder:</string>
 	<string name="favorite_default">Default</string>
