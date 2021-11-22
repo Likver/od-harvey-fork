@@ -107,7 +107,7 @@
 	<string name="replay_corrupted">El archivo de repetición está corrupto</string>
 
 	<string name="online_registration">Registration</string>
-	<string name="online_registration_process">Registering...</string>
+	<string name="online_registration_process">Registrando...</string>
 	<string name="online_loadrecord">Loading record details...</string>
 	<string name="online_invlogin">Invalid login</string>
 	<string name="online_invpassword">Password should be 4-32 characters</string>
@@ -119,8 +119,8 @@
 	<string name="userpanel_logging_in">Logging in, please wait.</string>
 
 	<!-- Color Picker -->
-	<string name="dialog_color_picker">Color Picker</string>
-	<string name="press_color_to_apply">Press on Color to apply</string>
+	<string name="dialog_color_picker"></string>
+	<string name="press_color_to_apply">Presiona el color que hayas elegido para seleccionarlo</string>
 
 	<string name="network_not_connected">网络连接失败，请检查网络设置</string>
 	<string name="xml_parser_failed">数据解析异常</string>
@@ -129,29 +129,30 @@
 	<string name="http_exception_error">网络异常，请求超时</string>
 	<string name="socket_exception_error">网络异常，读取数据超时</string>
 
-	<string name="binfoStr1" formatted="false">Length: %s BPM: %s Combo: %d</string>
-	<string name="binfoStr2" formatted="false">Circles: %d Sliders: %d Spinners: %d (MapId: %d)</string>
+	<string name="binfoStr1" formatted="false">Duración: %s BPM: %s Combo: %d</string>
+	<string name="binfoStr2" formatted="false">Círculos: %d Sliders: %d Spinners: %d (Id: %d)</string>
 
 	<!-- Color -->
 	<color name="notify_title_color">#fff</color>
 
 	<!-- Crash -->
-	<string name="crash">Sorry, abnormal program will now exit.</string>
-	<string name="app_run_code_error">Fatal error encountered</string>
-	<string name="osu_parser_error">The difficulty parsing error</string>
-	<string name="osu_parser_music_not_found" formatted="false">Failed loading %s: Could not find audio file</string>
-	<string name="osu_parser_timing_error" formatted="false">Failed loading %s: No uninherited timing point found</string>
-	<string name="require_storage_permission">Game wont run without storage permission, please enable it manually</string>
-
-	<string name="update_dialog_message">There is a new update available</string>
-	<string name="update_dialog_button_update">Update Now</string>
+	<string name="crash">Ha habido un problema grave, el jugeo se cerrará ahora.</string>
+	<string name="app_run_code_error">Error fatal</string>
+	<string name="osu_parser_error">Error del analizador de dificultades</string>
+	<string name="osu_parser_music_not_found" formatted="false">No se puede cargar %s: No hay archivo de audio</string>
+	<string name="osu_parser_timing_error" formatted="false">No se puede cargar %s: No uninherited timing point found</string>
+	<string name="require_storage_permission">El juego necesita acceder al almacenamiento, porfavor active el permiso manualmente</string>
+	
+	<string name="update_dialog_message">Hay una nueva versión disponible!</string>
+	<string name="update_dialog_button_update">Actualizar</string>
 	<string name="update_dialog_button_changelog">Changelog</string>
-	<string name="update_dialog_button_later">Later</string>
-	<string name="update_info_checking">Checking for new updates...</string>
-	<string name="update_info_latest">No new updates available</string>
+	<string name="update_dialog_button_later">Ahora no</string>
+	<string name="update_info_checking">Buscando actualizaciones, espera un momento...</string>
+	<string name="update_info_latest">Estás usando la versión mas reciente!</string>
 
-	<string name="test_ed_storyboard">View storyboard (experiment)</string>
+	<string name="test_ed_storyboard">Activar storyboard (experimental)</string>
 
+	
 	<!-- new data after 1.6.7(beta1) -->
         <string name="beta_checking_upgrade">Checking Upgrade...</string>
 	<string name="beta_check_upgrade_error">Failed to check new version, try again later</string>
