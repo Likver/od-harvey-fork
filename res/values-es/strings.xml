@@ -48,32 +48,32 @@
 
         <string name="dialog_visit_profile_page">Quieres ver tu perfil en la pagina de osu!Droid?</string>
 
-	<string name="favorite_folder">Folder:</string>
-	<string name="favorite_default">Default</string>
-	<string name="favorite_select">Select</string>
-	<string name="favorite_delete">Delete Folder</string>
-	<string name="favorite_add">Add</string>
-	<string name="favorite_remove">Remove</string>
-	<string name="favorite_new_folder">Create new folder</string>
-	<string name="favorite_warning_on_delete_default">you can\'t delete default folder</string>
-	<string name="favorite_ensure">Are you sure?</string>
-	<string name="favorite_manage">Manage Beatmap folder</string>
+	<string name="favorite_folder">Carpeta:</string>
+	<string name="favorite_default">Predeterminada</string>
+	<string name="favorite_select">Seleccionar</string>
+	<string name="favorite_delete">Eliminar</string>
+	<string name="favorite_add">Añadir</string>
+	<string name="favorite_remove">Eliminar</string>
+	<string name="favorite_new_folder">Crear nueva</string>
+	<string name="favorite_warning_on_delete_default">No puedes borrar la carpeta predeterminaa</string>
+	<string name="favorite_ensure">¿Estás seguro?</string>
+	<string name="favorite_manage">Añadir a una carpeta</string>
 
 	<string name="menu_score" formatted="false">Score: %s (%dx)</string>
-	<string name="menu_creator">Creator: %s</string>
-	<string name="menu_mod_back">Back</string>
-	<string name="menu_mod_title">Mod selection</string>
+	<string name="menu_creator">Creador: %s</string>
+	<string name="menu_mod_back">Atrás</string>
+	<string name="menu_mod_title">Selección de mods</string>
 	<string name="menu_mod_multiplier" formatted="false">Score %.2fx</string>
-	<string name="menu_mod_reset">Reset all mods</string>
+	<string name="menu_mod_reset">Reiniciar mods</string>
 
-	<string name="menu_properties_title">Song properties</string>
-	<string name="menu_properties_offset">Song offset:</string>
-	<string name="menu_properties_tofavs">Add to favorites</string>
-	<string name="menu_properties_fromfavs">Remove from favorites</string>
-	<string name="menu_properties_delete">Delete map</string>
-	<string name="menu_properties_delete_confirm">Are you sure?</string>
+	<string name="menu_properties_title">Propiedades</string>
+	<string name="menu_properties_offset">Offset:</string>
+	<string name="menu_properties_tofavs">Añadir a favoritos</string>
+	<string name="menu_properties_fromfavs">Quitar de favoritos</string>
+	<string name="menu_properties_delete">Eliminar mapa</string>
+	<string name="menu_properties_delete_confirm">¿Quieres eliminar el mapa?</string>
 
-        <string name="menu_settings_title">Options</string>
+        <string name="menu_settings_title">Optiones</string>
 
 	<string name="menu_deletescore_title">Delete selected score</string>
 	<string name="menu_deletescore_delete">Delete</string>
