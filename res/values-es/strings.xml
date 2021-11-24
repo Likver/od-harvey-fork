@@ -96,10 +96,10 @@
 	<string name="downloader_page" formatted="false">Pagina %d de %d</string>
 	<string name="downloader_nomaps">No se han encontrado mapas</string>
 
-	<string name="hint_login">Login</string>
-	<string name="hint_password">Password</string>
-	<string name="hint_confirm">Confirm password</string>
-	<string name="hint_email">E-mail</string>
+	<string name="hint_login">Nombre de usuario</string>
+	<string name="hint_password">Contraseña</string>
+	<string name="hint_confirm">Confirma la contraseña</string>
+	<string name="hint_email">Correo</string>
 
 	<string name="replay_invalid">No se puede cargar la repetición</string>
 	<string name="replay_cantdownload">No se puede descargar la repetición</string>
@@ -110,13 +110,13 @@
 	<string name="online_registration_process">Registrando...</string>
 	<string name="online_loadrecord">Loading record details...</string>
 	<string name="online_invlogin">Invalid login</string>
-	<string name="online_invpassword">Password should be 4-32 characters</string>
-	<string name="online_invconfirm">Passwords don\'t match</string>
-	<string name="online_invemail">Invaild e-mail</string>
-	<string name="online_regcomplete">Registration complete. Restart app to login</string>
+	<string name="online_invpassword">La contraseña debe tener al menos 4-32 caracteres</string>
+	<string name="online_invconfirm">Las contraseñas no coincide</string>
+	<string name="online_invemail">El correo no es válido, porfavor usa otro</string>
+	<string name="online_regcomplete">Ya estas has registrado! Reinicia el juego y ya podras usar tu cuenta</string>
 
-	<string name="userpanel_not_online">You are not online. Please log in or check your internet connection.</string>
-	<string name="userpanel_logging_in">Logging in, please wait.</string>
+	<string name="userpanel_not_online">No estas conectado. Inicia sesión o revisa tu conexion</string>
+	<string name="userpanel_logging_in">Iniciando sesion...</string>
 
 	<!-- Color Picker -->
 	<string name="dialog_color_picker"></string>
