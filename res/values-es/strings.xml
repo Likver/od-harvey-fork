@@ -154,6 +154,7 @@
 
 	
 	<!-- new data after 1.6.7(beta1) -->
+        <string name="ingame_settings">Opciones</string>
         <string name="beta_checking_upgrade">Analizado actualización</string>
 	<string name="beta_check_upgrade_error">Ha habido un problema al analizar la actualización, prueba más tarde</string>
 	<string name="beta_you_are_the_latest_version">Ya estás usando la versión mas reciente</string>
