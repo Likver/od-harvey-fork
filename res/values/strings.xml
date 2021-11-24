@@ -153,6 +153,7 @@
 	<string name="test_ed_storyboard">View storyboard (experiment)</string>
 
 	<!-- new data after 1.6.7(beta1) -->
+        <string name="ingame_settings">Settings</string>
     <string name="beta_checking_upgrade">Checking Upgrade...</string>
 	<string name="beta_check_upgrade_error">Failed to check new version, try again later</string>
 	<string name="beta_you_are_the_latest_version">You are already using the latest version</string>
