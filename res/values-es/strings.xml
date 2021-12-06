@@ -184,7 +184,7 @@
 	<string name="changelog_title">Changelog</string>
 	<string name="unranked_features">↓ Unranked ↓</string>
 
-        <string name="str_save_failed_replay">Presiona para guardar la repetición fallida</string>
+        <string name="str_save_failed_replay">Presiona aquí para guardar la repetición fallida</string>
         <string name="message_save_replay_successful">Se ha guardado la repetición!</string>
 	<string name="message_save_replay_failed">No se ha podido guardar la repetición</string>
 
