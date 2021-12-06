@@ -151,17 +151,17 @@
     <string name="opt_nativeplayer_title">Use built-in player</string>
     <string name="opt_nativeplayer_summary">Use built-in player for more accurate timing (doesn\'t support .ogg files)</string>
 
-    <string name="opt_metronome_switch_title">Sonido de Metronomo</string>
+    <string name="opt_metronome_switch_title">Metronomo</string>
     <string name="opt_metronome_switch_summary">Activa el sonido de un metrónomo mientras juegas</string>
 
     <!-- <string name="opt_vbroffset_title">VBR offset</string>
     <string name="opt_vbroffset_summary">Offset for mp3\'s encoded with variable bitrate (built-in player only)</string> -->
 
-    <string name="opt_sliderborders_title">Bordes de sliders</string>
-    <string name="opt_sliderborders_summary">Muestra los bordes de los sliders</string>
+    <string name="opt_sliderborders_title">Sliders</string>
+    <string name="opt_sliderborders_summary">Muestra un hitcircle al final de los sliders</string>
 
     <string name="opt_complexanimations_title">Efectos avanzados</string>
-    <string name="opt_complexanimations_summary">Activa efectos avanzados (ej: sliders serpenteantes etc..). Desactivalo para mejor rendimiento</string>
+    <string name="opt_complexanimations_summary">Activa efectos avanzados como los movimientos de los sliders. Desactivalo para mejor rendimiento</string>
 
 
     <string name="opt_other_title">Otros</string>
@@ -304,7 +304,7 @@
     <string name="opt_skinpath_summary"></string>
 
     <string name="opt_skin_top_path_title">Directorio de skins</string>
-    <string name="opt_skin_top_path_summary">(Por defecto: /sdcard/osu!droid/Skin)</string>
+    <string name="opt_skin_top_path_summary"></string>
 	
     <string name="opt_enableStoryboard_title">Activar Storyboard</string>
     <string name="opt_enableStoryboard_summary">Tu movil estará caliente!</string>
