@@ -45,7 +45,7 @@
 	
     <string-array name="spinner_style_names">
         <item>Moderno</item>
-        <item>Clasico</item>
+        <item>Clásico</item>
     </string-array>
 	
     <string-array name="spinner_style_values">
@@ -102,11 +102,11 @@
     <string name="opt_bg_title">Calidad de fondos</string>
     <string name="opt_bg_summary">Reducir la calidad de los fondos puede ayudar a aumentar el rendimiento</string>
 
-    <string name="opt_skin_title">Usar skins de los mapas</string>
-    <string name="opt_skin_summary">Cargar skins de los mapas si es posible</string>
+    <string name="opt_skin_title">Usar las skins de los mapas</string>
+    <string name="opt_skin_summary">Cargar las skins de los mapas si es posible</string>
 
-    <string name="opt_beatmap_sounds_title">>Usar sonidos de los mapas</string>
-    <string name="opt_beatmap_sounds_summary">Cargar sonidos de los mapas si es posible</string>
+    <string name="opt_beatmap_sounds_title">Usar los sonidos de los mapas</string>
+    <string name="opt_beatmap_sounds_summary">Cargar los sonidos de los mapas si es posible</string>
 
     <string name="opt_largeimages_title">Contador</string>
     <string name="opt_largeimages_summary">Muestra un contador al principio del mapa si está disponible</string>
@@ -114,11 +114,11 @@
     <string name="opt_sound_volume_title">Volumen de los golpes</string>
     <string name="opt_sound_volume_summary"></string>
 
-    <string name="opt_bgm_volume_title">Volumen de la musica</string>
+    <string name="opt_bgm_volume_title">Volumen de la música</string>
     <string name="opt_bgm_volume_summary"></string>
 
     <string name="opt_offset_title">Configurar offset</string>
-    <string name="opt_offset_summary">Offset de la musica en ms (valores positivos indican golpes mas tempranos)</string>
+    <string name="opt_offset_summary">Offset de la música en ms (valores positivos indican golpes más tempranos)</string>
 
     <string name="opt_special">Especial</string>
 	
@@ -151,7 +151,7 @@
     <string name="opt_nativeplayer_title">Use built-in player</string>
     <string name="opt_nativeplayer_summary">Use built-in player for more accurate timing (doesn\'t support .ogg files)</string>
 
-    <string name="opt_metronome_switch_title">Metronomo</string>
+    <string name="opt_metronome_switch_title">Metrónomo</string>
     <string name="opt_metronome_switch_summary">Activa el sonido de un metrónomo mientras juegas</string>
 
     <!-- <string name="opt_vbroffset_title">VBR offset</string>
@@ -161,12 +161,12 @@
     <string name="opt_sliderborders_summary">Muestra un hitcircle al final de los sliders</string>
 
     <string name="opt_complexanimations_title">Efectos avanzados</string>
-    <string name="opt_complexanimations_summary">Activa efectos avanzados como los movimientos de los sliders. Desactivalo para mejor rendimiento</string>
+    <string name="opt_complexanimations_summary">Activa efectos avanzados como los movimientos de los sliders. Desactivalo para un mejor rendimiento</string>
 
 
     <string name="opt_other_title">Otros</string>
 	
-    <string name="opt_multitouch_title">Multi-touch</string>
+    <string name="opt_multitouch_title">Multitouch</string>
     <string name="opt_multitouch_summary">Activa el multitouch si está disponible</string>
 
     <!-- <string name="opt_offsetscreen_title">Configure offsets</string>
@@ -179,18 +179,18 @@
     <string name="opt_pauseoffset_summary">Offset added every time you resume paused game</string> -->
 
     <string name="opt_musicpreview_title">Preview de las canciones</string>
-    <string name="opt_musicpreview_summary">Reproducir música en el menu de mapas</string>
+    <string name="opt_musicpreview_summary">Reproducir música en el menú de mapas</string>
 
     <string name="opt_playername_title">Nombre</string>
     <string name="opt_playername_summary">Este será tu nombre local</string>
 
-    <string name="opt_showcursor_title">Mostrar Cursor</string>
-    <string name="opt_showcursor_summary">Mostrar un cursor debajo de tus dedos muentras juegas</string>
+    <string name="opt_showcursor_title">Mostrar cursor</string>
+    <string name="opt_showcursor_summary">Muestra un cursor debajo de tus dedos muentras juegas</string>
 
     <string name="opt_demoSpline_title">Demo Spline</string>
     <string name="opt_demoSpline_summary">Use another spline algorithm for sliders. (experimental, may cause some unexpected problems.)</string>
 
-    <string name="opt_clearprops_title">Borrar datos de mapa</string>
+    <string name="opt_clearprops_title">Borrar datos de los mapas</string>
     <string name="opt_clearprops_summary">Elimina todos los datos de cada mapa (ej: offset, carpeta guardada, favs...)</string>
 	
     <string name="opt_online">Online</string>
@@ -199,7 +199,7 @@
     <string name="opt_online_summary"></string>
 
     <string name="opt_stayonline_title">Conectarse</string>
-    <string name="opt_stayonline_summary">Conectate a los servidores de osu!Droid para subir tus mejores jugadas y más!</string>
+    <string name="opt_stayonline_summary">Conéctate a los servidores de osu!Droid para subir tus mejores jugadas y más!</string>
 	
     <string name="opt_login_title">Nombre de usuario</string>
     <string name="opt_login_summary"></string>
@@ -219,8 +219,8 @@
     <string name="opt_spinner_style_title">Estilo del spinner</string>
     <string name="opt_spinner_style_summary">Cambia el estilo del spinner</string>
 
-    <string name="opt_combo_burst_title">Imagenes de combo</string>
-    <string name="opt_combo_burst_summary">Muestra unas imagenes cada vez que vas subiendo tu combo durante el juego</string>
+    <string name="opt_combo_burst_title">Imágenes de combo</string>
+    <string name="opt_combo_burst_summary">Muestra unas imágenes cada vez que aumentas tu combo durante el juego</string>
 
     <string name="opt_advanced">Avanzado</string>
 
@@ -234,10 +234,10 @@
     <string name="opt_lowdelay_summary">Intenta reducir el input delay, desactivalo si te sientes incomodo al jugar.</string>
 
     <string name="opt_fix_frame_offset_title">Arreglar problema de offset</string>
-    <string name="opt_fix_frame_offset_summary">Se intentará corregir el tiempo entre el input y el frame.</string>
+    <string name="opt_fix_frame_offset_summary">Se intentará corregir el offset entre el input y el frame.</string>
 	
     <string name="opt_remove_sliderlock_spinnerlock_title">Eliminar el bloqueo de slider y spiner (unranked)</string>
-    <string name="opt_remove_sliderlock_spinnerlock_summary">Intenta quitar el bloqueo del slider y del spinner. Ahora se puede jugar mapas de estilo 2b.</string>
+    <string name="opt_remove_sliderlock_spinnerlock_summary">Intenta quitar el bloqueo del slider y del spinner. Ahora puedes jugar mapas de estilo 2b.</string>
 
     <string name="opt_enable_extension_title">Enable extension</string>
 
@@ -250,15 +250,15 @@
     <string name="opt_savereplays_summary"></string>
 
     <string name="opt_bursts_title">Explosiones al golpear</string>
-    <string name="opt_bursts_summary">Muestra efectos de explosiones al golpear los círculos y los sliders</string>
+    <string name="opt_bursts_summary">Muestra efectos de explosiones al golpear los hitcircles y los sliders</string>
 
     <string name="opt_hitlighting_title">Luz al golpear</string>
-    <string name="opt_hitlighting_summary">Agrega una luz sutil detrás de las explosiones de golpes que ilumina el campo de juego</string>
+    <string name="opt_hitlighting_summary">Agrega una luz sutil detrás de las explosiones de los golpes que ilumina el campo de juego</string>
 
-    <!-- <string name="opt_dither_title">Usar Dither</string>
-    <string name="opt_dither_summary">Utilice el dither de hardware para obtener una mejor calidad de imagen (requiere reiniciar)</string> -->
+    <!-- <string name="opt_dither_title">Dither</string>
+    <string name="opt_dither_summary">Utilica el dither de hardware para obtener una mejor calidad de imagen (requiere reiniciar)</string> -->
 
-    <string name="opt_particles_title">Efectos de particulas</string>
+    <string name="opt_particles_title">Efectos de partículas</string>
     <string name="opt_particles_summary">Muestra efectos de partículas como el trail del cursor</string>
 	
     <!-- <string name="opt_long_trail_title">Long cursor trail</string>
@@ -291,7 +291,7 @@
     <string name="opt_cursor_size">Tamaño del cursor</string>
     <string name="opt_cursor_size_summary"></string>
 
-    <string name="opt_show_first_approach_circle_title">Mostrar el primer circulo de aproximacion con el mod HD</string>
+    <string name="opt_show_first_approach_circle_title">Mostrar el primer circulo de aproximación con HD mod</string>
     <string name="opt_show_first_approach_circle_summary">El primer circulo de aproximacion no se ocultará mientras se use el mod HD</string>
 
     <string name="opt_apikey_title">[Beta] osu!ppy API Key</string>
@@ -303,37 +303,39 @@
    <string name="opt_skinpath_title">Seleccionar Skin</string>
     <string name="opt_skinpath_summary"></string>
 
-    <string name="opt_skin_top_path_title">Directorio de skins</string>
+    <string name="opt_skin_top_path_title">Directorio de las skins</string>
     <string name="opt_skin_top_path_summary"></string>
 	
     <string name="opt_enableStoryboard_title">Activar Storyboard</string>
-    <string name="opt_enableStoryboard_summary">Tu movil estará caliente!</string>
+    <string name="opt_enableStoryboard_summary">Tu movil estará ardiendo!</string>
     
     <string name="opt_scandownload_title">Escanear mapas</string>
-    <string name="opt_scandownload_summary">Escanea automáticamente el directorio de Descargas para nuevos mapas (.osz) (Puede no funcionar si el directorio de mapas esta en la tarjeta SD)</string>
+    <string name="opt_scandownload_summary">Escanea automáticamente el directorio de Descargas para nuevos mapas (.osz) (Puede no funcionar si el directorio de mapas está en la tarjeta SD)</string>
 
     <string name="opt_superSlider_title">Super Slider</string>
-    <string name="opt_superSlider_summary">Slider de forma perfecta</string>
+    <string name="opt_superSlider_summary">Dibuja los sliders de forma perfecta</string>
 	
-    <string name="opt_changespeed_title">Modificar velocidad del juego</string>
+    <string name="opt_changespeed_title">Velocidad del juego</string>
+
     <string name="opt_forcear_title">Forzar AR</string>
 	
     <string name="opt_enablenc_whenspeedchange_title">Cambio de tono al activar la modificación de velocidad</string>
 	
     <string name="opt_enablespeedchange_title">Activar la velocidad del juego</string>
+
     <string name="opt_enableforcear_title">Activar Forzar AR"</string>
 	
     <string name="opt_calculate_slider_path_in_game_start_title">Calcular sliders al entrar a un mapa</string>
-    <string name="opt_calculate_slider_path_in_game_start_summary">Mejora el rendimiento en mapas con sliders complejos, pero tarda más en cargar</string>
+    <string name="opt_calculate_slider_path_in_game_start_summary">Mejora el rendimiento en mapas con sliders complejos, pero tardará más en cargar</string>
 
     <string name="opt_display_score_pp_title">Mostrar PP en la pantalla de resultados</string>
-    <string name="opt_display_score_pp_summary">Displays PP value in score result screen</string>
+    <string name="opt_display_score_pp_summary"></string>
 
     <string name="opt_setplayfield_title">Tamaño del campo de juego</string>
     <string name="opt_setplayfield_summary"></string>
 
-    <string name="opt_shrink_playfield_downwards_title">Mover campo de juego hacia abajo</string>
-    <string name="opt_shrink_playfield_downwards_summary">Hace que el campo de juego se mueva mas abajo de la pantalla</string>
+    <string name="opt_shrink_playfield_downwards_title">Mover el campo de juego hacia abajo</string>
+    <string name="opt_shrink_playfield_downwards_summary">Hace que el campo de juego se mueva a la parte inferior de la pantalla</string>
 
     <string name="opt_hide_replay_marquee_title">Ocultar mensaje de repetición</string>
     <string name="opt_hide_replay_marquee_summary">Oculta el mensaje con movimiento cuando ves una repetición</string>
@@ -344,10 +346,10 @@
     <string name="opt_receive_announcements_title">Recibir notificaciones</string>
     <string name="opt_receive_announcements_summary">Activa las notificaciones de anuncios sobre el juego, eventos, etc.</string>
 
-    <string name="opt_triangles_animation_title">Animacion de los menus</string>
-    <string name="opt_triangles_animation_summary">Desactiva esta opcion si la animacion de triangulos en los menus reduce el rendimiento de tu dispositivo</string>
+    <string name="opt_triangles_animation_title">Animación de los menús</string>
+    <string name="opt_triangles_animation_summary">Desactiva esta opción si la animación de triángulos en los menus reduce el rendimiento de tu dispositivo</string>
 
     <string name="opt_safe_beatmap_bg_title">Usar el fondo de la skin</string>
-    <string name="opt_safe_beatmap_bg_summary">Esto hara que siempre se use el fondo de la skin que estes utilizando mientras juegas</string>
+    <string name="opt_safe_beatmap_bg_summary">Esto hará que siempre se use el fondo de la skin que estés utilizando mientras juegas</string>
 	
 </resources>
