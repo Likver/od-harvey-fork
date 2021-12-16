@@ -71,13 +71,13 @@
 	<string name="menu_properties_tofavs">Añadir a favoritos</string>
 	<string name="menu_properties_fromfavs">Quitar de favoritos</string>
 	<string name="menu_properties_delete">Eliminar mapa</string>
-	<string name="menu_map_delete_confirm">¿Quieres eliminar el mapa?</string>
+	<string name="menu_proprties_delete_confirm">¿Quieres eliminar el mapa?</string>
 
         <string name="menu_settings_title">Opciones</string>
 
 	<string name="menu_deletescore_title">Eliminar score</string>
 	<string name="menu_deletescore_delete">Eliminar</string>
-	<string name="menu_deletescore_confirm">¿Quieres borrar el score?</string>
+	<string name="menu_deletescore_delete_confirm">¿Quieres borrar el score?</string>
 	<string name="menu_deletescore_delete_success">Se ha eliminado el score</string>
 
 	<string name="menu_search_title">Opciones de búsqueda</string>
