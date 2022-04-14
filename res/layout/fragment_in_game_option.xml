@@ -142,7 +142,7 @@
                             android:text="@string/opt_show_scoreboard_title" />
 
                        <CheckBox
-                            android:key="showcursor"
+                            android:id="@id/showCursor"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
