@@ -1,10 +1,10 @@
-name: Master Branch
+name: Move opts to in-game settings
 
 on:
   push:
-    branches: [ master ]
+    branches: [ opts-to-ingame-settings ]
   pull_request:
-    branches: [ master ]
+    branches: [ opts-to-ingame-settings ]
 
 jobs:
   build:
@@ -60,5 +60,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: osu-droid-debug
+        name: debug-ingamesetts
         path: ${{ steps.vars.outputs.apk_path }}
