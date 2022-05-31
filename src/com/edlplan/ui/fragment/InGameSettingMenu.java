@@ -29,6 +29,7 @@ public class InGameSettingMenu extends BaseFragment {
     private static InGameSettingMenu menu;
     private CheckBox enableStoryboard;
     private CheckBox showScoreboard;
+    private CheckBox showCursor;
     private CheckBox enableNCWhenSpeedChange;
     private CheckBox enableSpeedChange;
     private CheckBox enableForceAR;
@@ -113,6 +114,15 @@ public class InGameSettingMenu extends BaseFragment {
             Config.setShowScoreboard(isChecked);
             PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
                     .putBoolean("showscoreboard", isChecked)
+                    .commit();
+        });
+
+        showCursor = findViewById(R.id.showCursor);
+        showCursor.setChecked(Config.isShowCursor());
+        showCursor.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Config.setShowCursor(isChecked);
+            PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
+                    .putBoolean("showcursor", isChecked)
                     .commit();
         });
 
