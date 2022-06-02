@@ -127,15 +127,21 @@ public class InGameSettingMenu extends BaseFragment {
                     .commit();
         });
 
-        masterVolume = findViewById(R.id.masterVolume);
-        masterVolume.setProgress(
-        PreferenceManager.getDefaultSharedPreferences(getContext()).getInt("masterVolume", 100));
-        masterVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()) {
+        MasterVolume masterVolume = GlobalManager.getInstance().getMasterVolume();
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getContext()).getInt("bgmvolume", 100));
+        masterVolume.setProgress((int) Config.getBgmVolume());
+        masterVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                ((TextView) findViewById(R.id.masterVolumeText)).setText(String.valueOf(volume));
-                ((TextView) findViewById(R.id.masterVolumePercentText)).setText(volume + "%");
-                int p = Math.round(FMath.clamp(100 * (progress / 100f), 0, 100)); 
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                pref.edit().putInt("bgmVolume", i);
+                Config.setBgmVolume(i / 100f);
+
+            }
+            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override 
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                GlobalManager.getInstance().getSongService().setVolume(Config.getBgmVolume());
+
             }
         });
 
