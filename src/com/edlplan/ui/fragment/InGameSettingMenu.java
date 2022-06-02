@@ -127,15 +127,14 @@ public class InGameSettingMenu extends BaseFragment {
                     .commit();
         });
 
-        masterVolume = GlobalManager.getInstance().getMasterVolume();
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getContext()).getInt("bgmvolume", 100));
+        MainActivity masterVolume = GlobalManager.getInstance().getMainActivity();
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(mActivity);
         masterVolume.setProgress((int) Config.getBgmVolume());
         masterVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 pref.edit().putInt("bgmVolume", i);
                 Config.setBgmVolume(i / 100f);
-
             }
             @Override public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override 
