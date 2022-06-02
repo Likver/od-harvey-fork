@@ -1,0 +1,16 @@
+name: Move opts to in-game settings
+
+on:
+  push:
+    branches: [ opts-to-ingame-settings ]
+  pull_request:
+    branches: [ opts-to-ingame-settings ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+
+    steps:
+    - name: Checkout
+  uses: actions/checkout@v2.4.2
