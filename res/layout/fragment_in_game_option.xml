@@ -163,59 +163,7 @@
 							android:layout_width="match_parent"
 							android:layout_height="2dp" />
 					</RelativeLayout>
-
-					<TableLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:gravity="center">
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAlignment="textEnd"
-                                android:gravity="end"
-				android:layout_marginEnd="7dp"
-				android:layout_marginRight="7dp"
-                                android:text="@string/opt_bgm_volume_title" />
-
-                            <CheckBox
-                                android:visibility="invisible"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-
-                            <SeekBar
-                                android:id="@+id/masterVolume"
-                                android:layout_width="350dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:max="100" />
-
-                            <TextView
-                                android:id="@+id/masterVolumeText"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="25%" />
-                        </TableRow>
-
-                  	<RelativeLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content">
-
-				<View
-					android:layout_width="match_parent"
-					android:layout_height="2dp"
-					android:background="@color/triangleBackground" />
-
-				<com.edlplan.ui.TriangleEffectView
-					android:layout_width="match_parent"
-					android:layout_height="2dp" />
-			</RelativeLayout>
+					
 
                     <TableLayout
                         android:layout_width="wrap_content"
