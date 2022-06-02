@@ -143,7 +143,6 @@ public class Config {
             prefs.edit()
                 .putInt("offset", Integer.parseInt(prefs.getString("offset", "0")))
                 .putInt("bgbrightness", Integer.parseInt(prefs.getString("bgbrightness", "25")))
-		.putInt("mastervolume", Integer.parseInt(prefs.getString("mastervolume", "100"))) 
                 .putInt("soundvolume", Integer.parseInt(prefs.getString("soundvolume", "100")))
                 .putInt("bgmvolume", Integer.parseInt(prefs.getString("bgmvolume", "100")))
                 .putInt("cursorSize", Integer.parseInt(prefs.getString("cursorSize", "50")))
