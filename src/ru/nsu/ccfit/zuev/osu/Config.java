@@ -87,6 +87,7 @@ public class Config {
     
     private static float soundVolume,
         bgmVolume,
+	masterVolume,
         offset,
         backgroundBrightness,
         scaleMultiplier,
@@ -135,6 +136,7 @@ public class Config {
             int off = prefs.getInt("offset", 0);
             offset = (int) (Math.signum(off) * Math.min(250, Math.abs(off)));
             backgroundBrightness = prefs.getInt("bgbrightness", 25) / 100f;
+	    masterVolume = prefs.getInt("mastervolume", 100) / 100f;
             soundVolume = prefs.getInt("soundvolume", 100) / 100f;
             bgmVolume = prefs.getInt("bgmvolume", 100) / 100f;
             cursorSize = prefs.getInt("cursorSize", 50) / 100f;
@@ -142,6 +144,7 @@ public class Config {
             prefs.edit()
                 .putInt("offset", Integer.parseInt(prefs.getString("offset", "0")))
                 .putInt("bgbrightness", Integer.parseInt(prefs.getString("bgbrightness", "25")))
+		.putInt("mastervolume", Integer.parseInt(prefs.getString("mastervolume", "100"))) 
                 .putInt("soundvolume", Integer.parseInt(prefs.getString("soundvolume", "100")))
                 .putInt("bgmvolume", Integer.parseInt(prefs.getString("bgmvolume", "100")))
                 .putInt("cursorSize", Integer.parseInt(prefs.getString("cursorSize", "50")))
@@ -354,6 +357,14 @@ public class Config {
     public static void setBgmVolume(float bgmVolume) {
         Config.bgmVolume = bgmVolume;
     }
+
+    public static float getMasterVolume() {
+        return masterVolume;
+    }
+
+    public static void setMasterVolume() {
+        Config.masterVolume = masterVolume;
+    } 
 
     public static float getOffset() {
         return offset;
