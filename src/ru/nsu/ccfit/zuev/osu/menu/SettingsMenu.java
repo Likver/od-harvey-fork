@@ -284,7 +284,6 @@ public class SettingsMenu extends SettingsFragment {
             GlobalManager.getInstance().getMainScene().reloadOnlinePanel();
             GlobalManager.getInstance().getMainScene().loadTimeingPoints(false);
             GlobalManager.getInstance().getSongService().setVolume(Config.getBgmVolume());
-            GlobalManager.getInstance().getSongService().setMasterVolume():
             GlobalManager.getInstance().getSongService().setGaming(false);
             SettingsMenu.super.dismiss();
         });
