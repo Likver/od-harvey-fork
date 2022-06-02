@@ -136,7 +136,8 @@ public class InGameSettingMenu extends BaseFragment {
                 ((TextView) findViewById(R.id.masterVolumeText)).setText(String.valueOf(progress));
                 ((TextView) findViewById(R.id.masterVolumePercentText)).setText(progress + "%");
                 int p = Math.round(FMath.clamp(255 * (progress / 100f), 0, 100));
-            }
+            )};
+
             }
 
         enableNCWhenSpeedChange = findViewById(R.id.enableNCwhenSpeedChange);
