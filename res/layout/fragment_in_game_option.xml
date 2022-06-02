@@ -148,6 +148,14 @@
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
                             android:text="@string/opt_showcursor_title" />
+
+		       <CheckBox
+                            android:id="@+id/showFPS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/opt_fps_title" /> 
                     </LinearLayout>
 
 					<RelativeLayout
