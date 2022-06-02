@@ -34,7 +34,6 @@ public class InGameSettingMenu extends BaseFragment {
     private CheckBox enableSpeedChange;
     private CheckBox enableForceAR;
     private SeekBar backgroundBrightness;
-    private SeekBar masterVolume;
     private SeekBar changeSpeed;
     private SeekBar forceAR;
     private SeekBar flashlightFollowDelay;
@@ -125,23 +124,6 @@ public class InGameSettingMenu extends BaseFragment {
             PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
                     .putBoolean("showcursor", isChecked)
                     .commit();
-        });
-
-        MainActivity masterVolume = GlobalManager.getInstance().getMainActivity();
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(mActivity);
-        masterVolume.setProgress((int) Config.getBgmVolume());
-        masterVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                pref.edit().putInt("bgmVolume", i);
-                Config.setBgmVolume(i / 100f);
-            }
-            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
-            @Override 
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                GlobalManager.getInstance().getSongService().setVolume(Config.getBgmVolume());
-
-            }
         });
 
         enableNCWhenSpeedChange = findViewById(R.id.enableNCwhenSpeedChange);
@@ -240,7 +222,7 @@ public class InGameSettingMenu extends BaseFragment {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                int progress = seekBar.getProgress();
+          	    int progress = seekBar.getProgress();
                 float p = 0.5f + 0.05f * progress;
                 ((TextView) findViewById(R.id.changeSpeedText)).setText(String.format(Locale.getDefault(), "%.2fx", p));
                 ModMenu.getInstance().setChangeSpeed(p);
