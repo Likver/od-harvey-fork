@@ -127,7 +127,7 @@ public class InGameSettingMenu extends BaseFragment {
                     .commit();
         });
 
-        MasterVolume masterVolume = GlobalManager.getInstance().getMasterVolume();
+        masterVolume = GlobalManager.getInstance().getMasterVolume();
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getContext()).getInt("bgmvolume", 100));
         masterVolume.setProgress((int) Config.getBgmVolume());
         masterVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
