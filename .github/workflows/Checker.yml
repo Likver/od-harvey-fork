@@ -1,0 +1,20 @@
+name: Checker
+
+on:
+  push:
+    branches: [ master ]
+    branches: [ opts-to-ingame-settings ]
+
+  pull_request:
+    branches: [ master ]
+    branches: [ opts-to-ingame-settings ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+  uses: actions/checkout@v2.4.2
+
