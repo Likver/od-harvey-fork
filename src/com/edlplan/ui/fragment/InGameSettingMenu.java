@@ -130,14 +130,14 @@ public class InGameSettingMenu extends BaseFragment {
         masterVolume = findViewById(R.id.masterVolume);
         masterVolume.setProgress(
         PreferenceManager.getDefaultSharedPreferences(getContext()).getInt("masterVolume", 100));
-        masterVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        masterVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()) {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 ((TextView) findViewById(R.id.masterVolumeText)).setText(String.valueOf(volume));
                 ((TextView) findViewById(R.id.masterVolumePercentText)).setText(volume + "%");
                 int p = Math.round(FMath.clamp(100 * (progress / 100f), 0, 100)); 
-
-            });
+            }
+        });
 
         enableNCWhenSpeedChange = findViewById(R.id.enableNCwhenSpeedChange);
         enableNCWhenSpeedChange.setChecked(ModMenu.getInstance().isEnableNCWhenSpeedChange());
