@@ -1,4 +1,4 @@
-name: Move opts to in-game settings
+name: cHecker
 
 on:
   push:
