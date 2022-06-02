@@ -33,6 +33,7 @@ public class InGameSettingMenu extends BaseFragment {
     private CheckBox enableNCWhenSpeedChange;
     private CheckBox enableSpeedChange;
     private CheckBox enableForceAR;
+    private CheckBox showFPS;
     private SeekBar backgroundBrightness;
     private SeekBar changeSpeed;
     private SeekBar forceAR;
@@ -123,6 +124,15 @@ public class InGameSettingMenu extends BaseFragment {
             Config.setShowCursor(isChecked);
             PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
                     .putBoolean("showcursor", isChecked)
+                    .commit();
+        });
+
+	showFPS = findViewById(R.id.showFPS);
+        showFPS.setChecked(Config.isShowFPS());
+        showFPS.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Config.setShowFPS(isChecked);
+            PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
+                    .putBoolean("showfps", isChecked)
                     .commit();
         });
 
