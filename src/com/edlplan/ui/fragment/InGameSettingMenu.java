@@ -34,6 +34,7 @@ public class InGameSettingMenu extends BaseFragment {
     private CheckBox enableSpeedChange;
     private CheckBox enableForceAR;
     private SeekBar backgroundBrightness;
+    private SeekBar masterVolume;
     private SeekBar changeSpeed;
     private SeekBar forceAR;
     private SeekBar flashlightFollowDelay;
@@ -125,6 +126,17 @@ public class InGameSettingMenu extends BaseFragment {
                     .putBoolean("showcursor", isChecked)
                     .commit();
         });
+
+        masterVolume = findViewById(R.id.masterVolume);
+        masterVolume.setProgress(
+                PreferenceManager.getDefaultSharedPreferences(getContext()).getInt("masterVolume", 100));
+        masterVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                ((TextView) findViewById(R.id.masterVolumeText)).setText(String.valueOf(progress));
+                ((TextView) findViewById(R.id.masterVolumePercentText)).setText(progress + "%");
+                int p = Math.round(FMath.clamp(255 * (progress / 100f), 0, 100));
+            }
 
         enableNCWhenSpeedChange = findViewById(R.id.enableNCwhenSpeedChange);
         enableNCWhenSpeedChange.setChecked(ModMenu.getInstance().isEnableNCWhenSpeedChange());
