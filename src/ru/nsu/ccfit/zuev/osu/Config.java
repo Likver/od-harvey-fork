@@ -136,7 +136,6 @@ public class Config {
             int off = prefs.getInt("offset", 0);
             offset = (int) (Math.signum(off) * Math.min(250, Math.abs(off)));
             backgroundBrightness = prefs.getInt("bgbrightness", 25) / 100f;
-	    masterVolume = prefs.getInt("mastervolume", 100) / 100f;
             soundVolume = prefs.getInt("soundvolume", 100) / 100f;
             bgmVolume = prefs.getInt("bgmvolume", 100) / 100f;
             cursorSize = prefs.getInt("cursorSize", 50) / 100f;
