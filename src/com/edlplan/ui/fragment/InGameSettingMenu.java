@@ -129,14 +129,13 @@ public class InGameSettingMenu extends BaseFragment {
 
         masterVolume = findViewById(R.id.masterVolume);
         masterVolume.setProgress(
-                PreferenceManager.getDefaultSharedPreferences(getContext()).getInt("masterVolume", 100));
+        PreferenceManager.getDefaultSharedPreferences(getContext()).getInt("masterVolume", 100));
         masterVolume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                ((TextView) findViewById(R.id.masterVolumeText)).setText(String.valueOf(progress));
-                ((TextView) findViewById(R.id.masterVolumePercentText)).setText(progress + "%");
-                int p = Math.round(FMath.clamp(255 * (progress / 100f), 0, 100));
-            }
+                ((TextView) findViewById(R.id.masterVolumeText)).setText(String.valueOf(volume));
+                ((TextView) findViewById(R.id.masterVolumePercentText)).setText(volume + "%");
+                int p = Math.round(FMath.clamp(100 * (progress / 100f), 0, 100)); 
 
             });
 
