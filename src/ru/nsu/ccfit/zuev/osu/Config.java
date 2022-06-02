@@ -87,7 +87,6 @@ public class Config {
     
     private static float soundVolume,
         bgmVolume,
-	masterVolume,
         offset,
         backgroundBrightness,
         scaleMultiplier,
@@ -355,14 +354,6 @@ public class Config {
     public static void setBgmVolume(float bgmVolume) {
         Config.bgmVolume = bgmVolume;
     }
-
-    public static float getMasterVolume() {
-        return masterVolume;
-    }
-
-    public static void setMasterVolume() {
-        Config.masterVolume = masterVolume;
-    } 
 
     public static float getOffset() {
         return offset;
