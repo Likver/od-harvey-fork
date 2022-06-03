@@ -123,9 +123,11 @@
                         <TextView
 							android:layout_width="match_parent"
 							android:layout_height="30dp"
-							android:layout_marginTop="10dp"
+							android:layout_marginTop="5dp"
+							android:layout_marginBottom="10dp"
+							android:layout_marginLeft="10dp"
 							android:gravity="center"
-							android:textAlignment="center"
+							android:textAlignment="left"
 							android:text="Gameplay"
 							android:textSize="25dp"
 							android:textColor="#0099ff" />  
