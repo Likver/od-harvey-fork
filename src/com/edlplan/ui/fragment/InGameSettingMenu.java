@@ -145,7 +145,7 @@ public class InGameSettingMenu extends BaseFragment {
             PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
                     .putBoolean("safebeatmapbg", isChecked)
                     .commit();
-        }); 
+        });
 
 	hideInGameUI = findViewById(R.id.hideInGameUI);
         hideInGameUI.setChecked(Config.isHideInGameUI());
