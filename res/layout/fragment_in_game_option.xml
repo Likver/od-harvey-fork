@@ -93,7 +93,8 @@
 			android:id="@+id/optionBody"
 			android:layout_width="match_parent"
 			android:layout_height="200dp"
-			android:background="@color/frgBodyBackgroundLight"
+			android:background="#06ffffff"
+			**android:background="@color/frgBodyBackgroundLight"**
 			android:clickable="true"
 			android:orientation="vertical">
 
@@ -133,9 +134,19 @@
 							android:layout_weight="3"
 							android:gravity="center"
 							android:textAlignment="center"
-							android:text="Gameplay Options"
+							android:text="Gameplay"
 							android:textSize="25dp"
 							android:textColor="#0099ff " />  
+
+			<RelativeLayout
+				android:layout_marginTop="10dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			    <View
+				android:layout_width="match_parent"
+				android:layout_height="2dp"/>
+			</RelativeLayout>
 
                         <CheckBox
                             android:id="@+id/enableStoryboard"
