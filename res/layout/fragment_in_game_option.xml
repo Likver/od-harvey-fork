@@ -134,7 +134,7 @@
 							android:gravity="center"
 							android:textAlignment="center"
 							android:text="Gameplay Options"
-							android:textSize="25"
+							android:textSize="20"
 							android:textColor="#0099ff " />  
 
                         <CheckBox
