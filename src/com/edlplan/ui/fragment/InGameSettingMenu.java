@@ -140,7 +140,7 @@ public class InGameSettingMenu extends BaseFragment {
 	hideInGameUI = findViewById(R.id.hideInGameUI);
         hideInGameUI.setChecked(Config.isHideInGameUI());
         hideInGameUI.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            Config.setHideInGameUi(isChecked);
+            Config.setHideInGameUI(isChecked);
             PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
                     .putBoolean("hideingameui", isChecked)
                     .commit();
