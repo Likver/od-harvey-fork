@@ -35,7 +35,7 @@ public class InGameSettingMenu extends BaseFragment {
     private CheckBox enableForceAR;
     private CheckBox showFPS;
     private CheckBox hideInGameUI;
-    private ChrckBox safeBeatmapBg;
+    private CheckBox safeBeatmapBg;
     private SeekBar backgroundBrightness;
     private SeekBar changeSpeed;
     private SeekBar forceAR;
