@@ -93,7 +93,7 @@
 			android:id="@+id/optionBody"
 			android:layout_width="match_parent"
 			android:layout_height="200dp"
-			android:background="#06ffffff"
+			android:background="#BF000000"
 			**android:background="@color/frgBodyBackgroundLight"**
 			android:clickable="true"
 			android:orientation="vertical">
@@ -136,7 +136,7 @@
 							android:textAlignment="center"
 							android:text="Gameplay"
 							android:textSize="25dp"
-							android:textColor="#0099ff " />  
+							android:textColor="#0099ff" />  
 
                         <CheckBox
                             android:id="@+id/enableStoryboard"
