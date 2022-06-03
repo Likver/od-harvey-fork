@@ -34,6 +34,8 @@ public class InGameSettingMenu extends BaseFragment {
     private CheckBox enableSpeedChange;
     private CheckBox enableForceAR;
     private CheckBox showFPS;
+    private CheckBox safeBeatmapBg;
+    private CheckBox hideInGameUI;
     private SeekBar backgroundBrightness;
     private SeekBar changeSpeed;
     private SeekBar forceAR;
@@ -133,6 +135,24 @@ public class InGameSettingMenu extends BaseFragment {
             Config.setShowFPS(isChecked);
             PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
                     .putBoolean("showfps", isChecked)
+                    .commit();
+        });
+
+	safeBeatmapBG = findViewById(R.id.safeBeatmapBG);
+        safeBeatmapBG.setChecked(Config.isSafeBeatmapBG());
+        safeBeatmapBG.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Config.setSafeBeatmapBG(isChecked);
+            PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
+                    .putBoolean("safebeatmapbg", isChecked)
+                    .commit();
+        }); 
+
+	hideInGameUI = findViewById(R.id.hideInGameUI);
+        hideInGameUI.setChecked(Config.isHideInGameUI());
+        hideInGameUI.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Config.setHideInGameUi(isChecked);
+            PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
+                    .putBoolean("hideingameui", isChecked)
                     .commit();
         });
 
