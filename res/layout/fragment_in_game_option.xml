@@ -120,12 +120,22 @@
                     android:layout_margin="20dp"
                     android:orientation="vertical">
 
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="-5dp"
                         android:orientation="horizontal">
+                            
+                        <TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:layout_weight="3"
+							android:gravity="center"
+							android:textAlignment="center"
+							android:text="Gameplay Options"
+							android:textSize="25"
+							android:textColor="#0099ff " />  
 
                         <CheckBox
                             android:id="@+id/enableStoryboard"
@@ -173,21 +183,6 @@
                             android:layout_weight="1"
                             android:text="@string/opt_safe_beatmap_bg_title" />
                     </LinearLayout>
-
-					<RelativeLayout
-						android:layout_width="match_parent"
-						android:layout_height="wrap_content">
-
-						<View
-							android:layout_width="match_parent"
-							android:layout_height="2dp"
-							android:background="@color/triangleBackground" />
-
-						<com.edlplan.ui.TriangleEffectView
-							android:layout_width="match_parent"
-							android:layout_height="2dp" />
-					</RelativeLayout>
-					
 
                     <TableLayout
                         android:layout_width="wrap_content"
