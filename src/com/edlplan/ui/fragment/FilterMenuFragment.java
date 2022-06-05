@@ -39,7 +39,7 @@ public class FilterMenuFragment extends BaseFragment implements IFilterMenu {
     private CheckBox favoritesOnly;
     private TextView favoriteFolder;
     private Button orderButton;
-    //private TextView openMapInfo;
+    private TextView openMapInfo;
 
     private Updater updater;
 
@@ -249,14 +249,14 @@ public class FilterMenuFragment extends BaseFragment implements IFilterMenu {
         }
     }
 
-    //private void openMapinfoDialog() {
-    //    MapInfoFragment dialog = new MapInfoFragment();
-    //    TrackInfo selectedTrack = GlobalManager.getInstance().getSongMenu().getSelectedTrack();
-    //    DifficultyReCalculator diffReCalculator = new DifficultyReCalculator();
-    //    if (selectedTrack != null)
-    //        dialog.showWithMap(selectedTrack, ModMenu.getInstance().getSpeed(), diffReCalculator.getCS(selectedTrack));
-    //    diffReCalculator = null;
-    //}
+    private void openMapinfoDialog() {
+        MapInfoFragment dialog = new MapInfoFragment();
+        TrackInfo selectedTrack = GlobalManager.getInstance().getSongMenu().getSelectedTrack();
+        DifficultyReCalculator diffReCalculator = new DifficultyReCalculator();
+        if (selectedTrack != null)
+            dialog.showWithMap(selectedTrack, ModMenu.getInstance().getSpeed(), diffReCalculator.getCS(selectedTrack));
+        diffReCalculator = null;
+    }
 
     public void reloadViewData() {
         if (isCreated()) {
@@ -264,7 +264,7 @@ public class FilterMenuFragment extends BaseFragment implements IFilterMenu {
             favoritesOnly = findViewById(R.id.showFav);
             orderButton = findViewById(R.id.sortButton);
             favoriteFolder = findViewById(R.id.favFolder);
-            //openMapInfo = findViewById(R.id.openMapInfo);
+            openMapInfo = findViewById(R.id.openMapInfo);
 
             favoritesOnly.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 updateFavChecked();
@@ -311,10 +311,10 @@ public class FilterMenuFragment extends BaseFragment implements IFilterMenu {
                 }
             });
 
-            //openMapInfo.setOnClickListener(v -> {
-            //    openMapinfoDialog();
-            //});
-            //openMapInfo.setText("MapInfo");
+            openMapInfo.setOnClickListener(v -> {
+                openMapinfoDialog();
+            });
+            openMapInfo.setText("MapInfo");
             
             favoritesOnly.setChecked(savedFavOnly);
             if (savedFilter != null && savedFilter.length() > 0) {
