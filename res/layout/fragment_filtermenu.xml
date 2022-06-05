@@ -61,7 +61,7 @@
                         android:layout_marginLeft="10dp"
                         android:background="@drawable/rounded_rect"
                         android:minWidth="80dp"
-			android:height="25dp"
+			android:stateListAnimator="@null"
                         android:textColor="#000000"
                         android:textSize="13sp" />
 	  
