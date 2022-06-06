@@ -139,14 +139,12 @@
 			          <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
                         android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/enableStoryboard"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-			                android:layout_marginLeft="10dp"
                             android:text="@string/opt_enableStoryboard_title" />
 
                         <CheckBox
@@ -159,16 +157,16 @@
 		              </LinearLayout>
 		
 		         <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_margin="20dp"
+		    android:layout_marginLeft="5dp"
                     android:orientation="vertical">
 		
                        <CheckBox
                             android:id="@+id/showCursor"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
                             android:layout_weight="1"
                             android:text="@string/opt_showcursor_title" />
 
@@ -176,7 +174,6 @@
                             android:id="@+id/showFPS"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
                             android:layout_weight="1"
                             android:text="@string/opt_fps_title" />
 
@@ -184,7 +181,6 @@
                             android:id="@+id/hideInGameUI"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
                             android:layout_weight="1"
                             android:text="@string/opt_hide_ingame_ui_title" />
 
@@ -192,7 +188,6 @@
                             android:id="@+id/safeBeatmapBg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
                             android:layout_weight="1"
                             android:text="@string/opt_safe_beatmap_bg_title" />
                     </LinearLayout>
