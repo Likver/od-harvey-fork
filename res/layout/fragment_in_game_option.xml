@@ -132,8 +132,8 @@
 							android:textColor="#0099ff" />  
 
 			<LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
                         android:layout_marginLeft="-5dp"
                         android:orientation="horizontal">
 
@@ -142,6 +142,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/opt_enableStoryboard_title" />
+			</LinearLayout>
+
+<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="-5dp"
+                        android:orientation="horizontal">
 
                         <CheckBox
                             android:id="@+id/showScoreboard"
@@ -150,6 +157,13 @@
                             android:layout_marginLeft="5dp"
                             android:layout_weight="1"
                             android:text="@string/opt_show_scoreboard_title" />
+</LinearLayout>
+
+<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="-5dp"
+                        android:orientation="horizontal">
 
                        <CheckBox
                             android:id="@+id/showCursor"
@@ -159,6 +173,12 @@
                             android:layout_weight="1"
                             android:text="@string/opt_showcursor_title" />
 
+<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="-5dp"
+                        android:orientation="horizontal">
+
 		       <CheckBox
                             android:id="@+id/showFPS"
                             android:layout_width="wrap_content"
@@ -166,6 +186,13 @@
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
                             android:text="@string/opt_fps_title" />
+</LinearLayout>
+
+<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="-5dp"
+                        android:orientation="horizontal">
 
 		       <CheckBox
                             android:id="@+id/hideInGameUI"
@@ -174,6 +201,13 @@
                             android:layout_marginLeft="10dp"
                             android:layout_weight="1"
                             android:text="@string/opt_hide_ingame_ui_title" />
+</LinearLayout>
+
+<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="-5dp"
+                        android:orientation="horizontal">
 
 		       <CheckBox
                             android:id="@+id/safeBeatmapBg"
@@ -183,6 +217,7 @@
                             android:layout_weight="1"
                             android:text="@string/opt_safe_beatmap_bg_title" />
                     </LinearLayout>
+</LinearLayout>
 
                     <TableLayout
                         android:layout_width="wrap_content"
