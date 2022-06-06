@@ -131,7 +131,12 @@
 							android:textSize="25dp"
 							android:textColor="#0099ff" />  
 
-			<LinearLayout
+                     <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+			          <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -141,16 +146,24 @@
                             android:id="@+id/enableStoryboard"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+			                android:layout_marginLeft="10dp"
                             android:text="@string/opt_enableStoryboard_title" />
 
                         <CheckBox
                             android:id="@+id/showScoreboard"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
                             android:text="@string/opt_show_scoreboard_title" />
 
+		              </LinearLayout>
+		
+		         <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+		
                        <CheckBox
                             android:id="@+id/showCursor"
                             android:layout_width="wrap_content"
@@ -183,7 +196,7 @@
                             android:layout_weight="1"
                             android:text="@string/opt_safe_beatmap_bg_title" />
                     </LinearLayout>
-
+               </LinearLayout>
                     <TableLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
