@@ -60,5 +60,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: debug-ingamesetts
+        name: debug-L
         path: ${{ steps.vars.outputs.apk_path }}
